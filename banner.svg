@@ -1,0 +1,66 @@
+<svg width="1200" height="180" xmlns="http://www.w3.org/2000/svg">
+  <!-- 蓝色渐变背景 -->
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e5494;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2d6bb0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e5494;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1200" height="180" fill="url(#blueGradient)"/>
+  
+  <!-- 左侧学院风采文字 -->
+  <text x="60" y="50" fill="white" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="bold">学</text>
+  <text x="60" y="80" fill="white" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="bold">院</text>
+  <text x="60" y="110" fill="white" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="bold">风</text>
+  <text x="60" y="140" fill="white" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="bold">采</text>
+  <text x="60" y="165" fill="#ffd700" font-family="Arial, sans-serif" font-size="12" font-weight="bold">+MORE</text>
+  
+  <!-- 第一个奖牌 - 晶硅光伏行业产融融合共同体副理事长单位 -->
+  <g transform="translate(200, 30)">
+    <rect x="0" y="0" width="240" height="120" rx="8" fill="#d4af37" stroke="#b8941f" stroke-width="3" filter="url(#shadow)"/>
+    <rect x="8" y="8" width="224" height="104" rx="4" fill="#f4e4a6" stroke="#d4af37" stroke-width="2"/>
+    <text x="120" y="25" text-anchor="middle" fill="#8b4513" font-family="Microsoft YaHei, sans-serif" font-size="11" font-weight="bold">晶硅光伏行业产融融合共同体</text>
+    <text x="120" y="55" text-anchor="middle" fill="#8b4513" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="bold">副理事长单位</text>
+    <text x="120" y="85" text-anchor="middle" fill="#8b4513" font-family="Microsoft YaHei, sans-serif" font-size="10">二〇二三年十一月</text>
+    <!-- 装饰边框 -->
+    <rect x="12" y="12" width="216" height="96" rx="4" fill="none" stroke="#d4af37" stroke-width="1"/>
+  </g>
+  
+  <!-- 第二个奖牌 - 中国有色金属工业科技奖励单位 -->
+  <g transform="translate(480, 30)">
+    <rect x="0" y="0" width="240" height="120" rx="8" fill="#c0c0c0" stroke="#a0a0a0" stroke-width="3" filter="url(#shadow)"/>
+    <rect x="8" y="8" width="224" height="104" rx="4" fill="#f0f0f0" stroke="#c0c0c0" stroke-width="2"/>
+    <!-- 山峰图标 -->
+    <polygon points="120,25 110,40 130,40" fill="#4169e1"/>
+    <text x="120" y="50" text-anchor="middle" fill="#2c2c2c" font-family="Microsoft YaHei, sans-serif" font-size="10">中国有色金属工业科技奖励</text>
+    <text x="120" y="70" text-anchor="middle" fill="#2c2c2c" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold">副理事长单位</text>
+    <!-- 装饰花纹 -->
+    <circle cx="30" cy="30" r="8" fill="none" stroke="#a0a0a0" stroke-width="1"/>
+    <circle cx="210" cy="30" r="8" fill="none" stroke="#a0a0a0" stroke-width="1"/>
+    <circle cx="30" cy="90" r="8" fill="none" stroke="#a0a0a0" stroke-width="1"/>
+    <circle cx="210" cy="90" r="8" fill="none" stroke="#a0a0a0" stroke-width="1"/>
+  </g>
+  
+  <!-- 第三个奖牌 - 成都市蓉商总会后备人才基地 -->
+  <g transform="translate(760, 30)">
+    <rect x="0" y="0" width="240" height="120" rx="8" fill="#cd7f32" stroke="#b8860b" stroke-width="3" filter="url(#shadow)"/>
+    <rect x="8" y="8" width="224" height="104" rx="4" fill="#deb887" stroke="#cd7f32" stroke-width="2"/>
+    <!-- 圆形标志 -->
+    <circle cx="50" cy="40" r="15" fill="#4169e1" stroke="white" stroke-width="2"/>
+    <text x="50" y="45" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">蓉</text>
+    <text x="120" y="30" text-anchor="middle" fill="#2c2c2c" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold">成都市蓉商总会</text>
+    <text x="120" y="55" text-anchor="middle" fill="#2c2c2c" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold">后备人才基地</text>
+    <text x="120" y="85" text-anchor="middle" fill="#2c2c2c" font-family="Microsoft YaHei, sans-serif" font-size="10">成都市蓉商总会颁发</text>
+  </g>
+  
+  <!-- 右侧装饰元素 -->
+  <circle cx="1120" cy="60" r="20" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1140" cy="100" r="15" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="1100" cy="130" r="12" fill="rgba(255,255,255,0.06)"/>
+</svg>

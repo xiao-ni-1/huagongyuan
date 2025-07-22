@@ -129,8 +129,8 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 250px;
-            /* 减小最大宽度以适应容器 */
+            max-width: 240px;
+            /* 进一步减少通知公告的最大宽度 */
             display: inline-block;
             vertical-align: middle;
             font-size: 15px;
@@ -138,8 +138,8 @@
         }
 
         .news-title {
-            max-width: 350px;
-            /* 减小学院快讯的最大宽度 */
+            max-width: 300px;
+            /* 进一步减少学院快讯的最大宽度 */
         }
 
         .news-icon {
@@ -329,19 +329,19 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 200px;
-            /* 减小底部三栏的文字宽度 */
+            max-width: 280px;
+            /* 增加底部三栏的文字宽度 */
             display: inline-block;
             vertical-align: middle;
         }
 
         /* ====== 页脚蓝色信息区 ====== */
         .footer {
-            background: #0b4a8b;
-            color: #e0e6ee;
-            padding: 32px 0 18px 0;
+            background: #1e5494;
+            color: #ffffff;
+            padding: 20px 0 15px 0;
             margin-top: 40px;
-            font-size: 15px;
+            font-size: 14px;
             text-align: center;
             position: relative;
         }
@@ -376,9 +376,9 @@
         }
 
         .footer .footer-link {
-            margin: 10px 0 0 0;
-            color: #e0e6ee;
-            font-size: 14px;
+            margin: 8px 0 0 0;
+            color: #ffffff;
+            font-size: 13px;
         }
 
         /* ====== 响应式调整 ====== */
@@ -394,16 +394,17 @@
 
             .notice-title,
             .notice-title.normal {
-                max-width: 200px;
-                /* 进一步减小宽度 */
+                max-width: 190px;
+                /* 响应式下进一步减少通知公告宽度 */
             }
 
             .news-title {
-                max-width: 280px;
+                max-width: 260px;
+                /* 响应式下进一步减少学院快讯宽度 */
             }
 
             .bottom-list td:first-child {
-                max-width: 150px;
+                max-width: 220px;
             }
         }
 
@@ -432,12 +433,12 @@
             .notice-title,
             .notice-title.normal,
             .news-title {
-                max-width: 180px;
-                /* 移动端进一步减小 */
+                max-width: 170px;
+                /* 移动端进一步减少通知公告和学院快讯宽度 */
             }
 
             .bottom-list td:first-child {
-                max-width: 120px;
+                max-width: 180px;
             }
         }
 
@@ -488,6 +489,30 @@
             opacity: 0.9;
             transform: scale(1.02);
             transition: all 0.2s ease;
+        }
+
+        /* ====== 奖项图片样式 ====== */
+        .award-img {
+            width: 300px;
+            height: 280px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .award-img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ====== 横幅MORE链接样式 ====== */
+        .academy-text div[onclick] {
+            transition: opacity 0.2s ease;
+        }
+
+        .academy-text div[onclick]:hover {
+            opacity: 0.8;
         }
 
         /* ====== 轮播图样式 ====== */
@@ -641,8 +666,23 @@
     </div>
     <!-- ====== 下方横幅图片 ====== -->
     <div style="max-width:1200px;margin:36px auto 0 auto;">
-        <img src="https://picsum.photos/1200/180?random=21" alt="学术风采" onclick="window.location.href='#'"
-            style="width:100%;height:180px;object-fit:cover;border-radius:10px;box-shadow:0 2px 8px rgba(30,84,148,0.13);cursor:pointer;">
+        <div class="awards-container"
+            style="display:flex;justify-content:space-between;align-items:center;background:linear-gradient(90deg, #1e5494 0%, #2d6bb0 50%, #1e5494 100%);padding:15px 30px;border-radius:10px;box-shadow:0 2px 8px rgba(30,84,148,0.13);">
+            <!-- 左侧学院风采文字 -->
+            <div class="academy-text"
+                style="color:white;font-family:Microsoft YaHei,sans-serif;font-weight:bold;margin-right:20px;">
+                <div style="font-size:24px;line-height:30px;writing-mode:vertical-rl;text-orientation:upright;">学院风采
+                </div>
+                <div style="color:#ffd700;font-size:12px;margin-top:10px;cursor:pointer;"
+                    onclick="window.location.href='#'">+MORE</div>
+            </div>
+            <!-- 三个奖项图片 -->
+            <div class="awards-images" style="display:flex;gap:20px;flex:1;justify-content:center;">
+                <img src="award1.svg" alt="晶硅光伏行业产融融合共同体副理事长单位" class="award-img" onclick="window.location.href='#'">
+                <img src="award2.svg" alt="中国有色金属工业科技奖励副理事长单位" class="award-img" onclick="window.location.href='#'">
+                <img src="award3.svg" alt="成都市蓉商总会后备人才基地" class="award-img" onclick="window.location.href='#'">
+            </div>
+        </div>
     </div>
     <!-- ====== 下方三栏内容区（学术动态/党建工作/人才培养） ====== -->
     <div class="main-bottom">
