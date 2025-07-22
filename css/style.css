@@ -7,254 +7,373 @@
 
 /* 全局字体和颜色设置 */
 body {
-    font-family: 'Microsoft YaHei', Arial, sans-serif; /* 设置中文优先的字体 */
-    line-height: 1.6; /* 行高设置为字体大小的1.6倍 */
-    color: #333; /* 文字颜色设置为深灰色 */
-    background-color: #f5f5f5; /* 背景色设置为浅灰色 */
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    /* 设置中文优先的字体 */
+    line-height: 1.6;
+    /* 行高设置为字体大小的1.6倍 */
+    color: #333;
+    /* 文字颜色设置为深灰色 */
+    background-color: #f5f5f5;
+    /* 背景色设置为浅灰色 */
 }
 
 /* 容器通用样式 */
 .container {
     width: 100%;
-    max-width: 1200px; /* 最大宽度限制 */
-    margin: 0 auto; /* 水平居中 */
-    padding: 0 15px; /* 左右内边距 */
+    max-width: 1200px;
+    /* 最大宽度限制 */
+    margin: 0 auto;
+    /* 水平居中 */
+    padding: 0 15px;
+    /* 左右内边距 */
 }
 
 /* 链接样式 */
 a {
-    text-decoration: none; /* 移除下划线 */
-    color: #333; /* 链接颜色 */
-    transition: color 0.3s ease; /* 颜色变化过渡效果 */
+    text-decoration: none;
+    /* 移除下划线 */
+    color: #333;
+    /* 链接颜色 */
+    transition: color 0.3s ease;
+    /* 颜色变化过渡效果 */
 }
 
 /* 链接悬停效果 */
 a:hover {
-    color: #0056b3; /* 悬停时的颜色变化 */
+    color: #0056b3;
+    /* 悬停时的颜色变化 */
 }
 
 /* 列表样式 */
 ul {
-    list-style: none; /* 移除列表项标记 */
+    list-style: none;
+    /* 移除列表项标记 */
 }
 
 /* 头部样式 - 网站顶部区域 */
 header {
-    background-color: #1e5c9a; /* 深蓝色背景 */
-    color: white; /* 白色文字 */
-    padding: 15px 0; /* 上下内边距 */
+    background: linear-gradient(to top, #1e5c9a, #003366);
+    /* 从下到上渐变的深蓝色背景 */
+    color: white;
+    /* 白色文字 */
+    padding: 15px 0;
+    /* 上下内边距 */
 }
 
 /* 头部容器布局 */
 header .container {
-    display: flex; /* 弹性布局 */
-    justify-content: space-between; /* 两端对齐 */
-    align-items: center; /* 垂直居中 */
+    display: flex;
+    /* 弹性布局 */
+    justify-content: space-between;
+    /* 两端对齐 */
+    align-items: center;
+    /* 垂直居中 */
 }
 
 /* Logo和标题容器 */
 .logo-container {
-    display: flex; /* 弹性布局 */
-    align-items: center; /* 垂直居中 */
+    display: flex;
+    /* 弹性布局 */
+    align-items: center;
+    /* 垂直居中 */
+}
+
+/* 学院名称容器 */
+.college-name-container {
+    display: flex;
+    /* 弹性布局 */
+    flex-direction: column;
+    /* 纵向排列 */
 }
 
 /* Logo图片样式 */
 .logo {
-    height: 60px; /* 固定高度 */
-    margin-right: 15px; /* 右侧外边距 */
+    height: 60px;
+    /* 固定高度 */
+    margin-right: 15px;
+    /* 右侧外边距 */
 }
 
 /* 学院中文名称样式 */
 .college-name {
-    font-size: 28px; /* 增大字体大小 */
-    font-weight: bold; /* 加粗字体 */
+    font-size: 28px;
+    /* 增大字体大小 */
+    font-weight: bold;
+    /* 加粗字体 */
     margin: 0;
     line-height: 1.2;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* 添加文字阴影 */
-    letter-spacing: 1px; /* 增加字间距 */
-    font-family: 'SimHei', 'Microsoft YaHei', sans-serif; /* 使用黑体字 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    /* 添加文字阴影 */
+    letter-spacing: 1px;
+    /* 增加字间距 */
+    font-family: 'SimHei', 'Microsoft YaHei', sans-serif;
+    /* 使用黑体字 */
 }
 
 /* 学院英文名称样式 */
 .en-title {
-    font-size: 14px; /* 字体大小 */
-    display: block; /* 块级显示 */
-    margin-top: 5px; /* 上方外边距 */
-    font-style: italic; /* 斜体 */
-    opacity: 0.8; /* 透明度 */
-    letter-spacing: 0.5px; /* 字间距 */
+    font-size: 14px;
+    /* 字体大小 */
+    display: block;
+    /* 块级显示 */
+    margin-top: 5px;
+    /* 上方外边距 */
+    font-style: italic;
+    /* 斜体 */
+    opacity: 0.8;
+    /* 透明度 */
+    letter-spacing: 0.5px;
+    /* 字间距 */
 }
 
 /* 搜索区域容器 */
 .search-container {
-    display: flex; /* 弹性布局 */
-    flex-direction: column; /* 纵向排列 */
-    align-items: flex-end; /* 右对齐 */
+    display: flex;
+    /* 弹性布局 */
+    flex-direction: column;
+    /* 纵向排列 */
+    align-items: flex-end;
+    /* 右对齐 */
 }
 
 /* 搜索表单样式 */
 .search-container form {
-    display: flex; /* 弹性布局 */
-    margin-bottom: 5px; /* 底部外边距 */
+    display: flex;
+    /* 弹性布局 */
+    margin-bottom: 5px;
+    /* 底部外边距 */
 }
 
 /* 搜索输入框样式 */
 .search-container input {
-    padding: 8px 12px; /* 内边距 */
-    border: none; /* 无边框 */
-    border-radius: 4px 0 0 4px; /* 左侧圆角 */
-    width: 200px; /* 固定宽度 */
+    padding: 8px 12px;
+    /* 内边距 */
+    border: none;
+    /* 无边框 */
+    border-radius: 4px 0 0 4px;
+    /* 左侧圆角 */
+    width: 200px;
+    /* 固定宽度 */
 }
 
 /* 搜索按钮样式 */
 .search-container button {
-    padding: 8px 12px; /* 内边距 */
-    background-color: #0056b3; /* 蓝色背景 */
-    color: white; /* 白色文字 */
-    border: none; /* 无边框 */
-    border-radius: 0 4px 4px 0; /* 右侧圆角 */
-    cursor: pointer; /* 鼠标指针样式 */
-    transition: background-color 0.3s ease; /* 背景色过渡效果 */
+    padding: 8px 12px;
+    /* 内边距 */
+    background-color: #0056b3;
+    /* 蓝色背景 */
+    color: white;
+    /* 白色文字 */
+    border: none;
+    /* 无边框 */
+    border-radius: 0 4px 4px 0;
+    /* 右侧圆角 */
+    cursor: pointer;
+    /* 鼠标指针样式 */
+    transition: background-color 0.3s ease;
+    /* 背景色过渡效果 */
 }
 
 /* 搜索按钮悬停效果 */
 .search-container button:hover {
-    background-color: #003d7a; /* 深蓝色背景 */
+    background-color: #003d7a;
+    /* 深蓝色背景 */
 }
 
 /* 设置链接样式 */
 .setting-link {
-    color: white; /* 白色文字 */
-    font-size: 12px; /* 字体大小 */
-    margin-top: 5px; /* 上方外边距 */
+    color: white;
+    /* 白色文字 */
+    font-size: 12px;
+    /* 字体大小 */
+    margin-top: 5px;
+    /* 上方外边距 */
 }
 
 /* 导航栏样式 - 主菜单区域 */
 nav {
-    background-color: #0056b3; /* 蓝色背景 */
-    position: relative; /* 相对定位 */
-    z-index: 100; /* 确保导航栏在其他元素上方 */
+    background: linear-gradient(to right, #1e5c9a, #3a7ab3);
+    /* 蓝色横向渐变背景 */
+    position: relative;
+    /* 相对定位 */
+    z-index: 100;
+    /* 确保导航栏在其他元素上方 */
 }
 
 /* 主导航菜单布局 */
 .main-nav {
-    display: flex; /* 弹性布局 */
-    justify-content: space-between; /* 均匀分布 */
+    display: flex;
+    /* 弹性布局 */
+    justify-content: center;
+    /* 居中对齐 */
+    flex-wrap: nowrap;
+    /* 不换行 */
 }
 
 /* 主导航菜单项样式 */
-.main-nav > li {
-    position: relative; /* 相对定位，用于二级菜单定位 */
-    flex: 1; /* 弹性布局占比 */
-    text-align: center; /* 文字居中 */
+.main-nav>li {
+    position: relative;
+    /* 相对定位，用于二级菜单定位 */
+    flex: 0 1 auto;
+    /* 不伸展，可缩小，自动宽度 */
+    text-align: center;
+    /* 文字居中 */
+    white-space: nowrap;
+    /* 文字不换行 */
 }
 
 /* 主导航菜单链接样式 */
-.main-nav > li > a {
-    display: block; /* 块级显示 */
-    color: white; /* 白色文字 */
-    padding: 15px 10px; /* 内边距 */
-    font-size: 16px; /* 字体大小 */
-    transition: background-color 0.3s ease; /* 背景色过渡效果 */
+.main-nav>li>a {
+    display: block;
+    /* 块级显示 */
+    color: white;
+    /* 白色文字 */
+    padding: 15px 10px;
+    /* 减小水平内边距 */
+    font-size: 16px;
+    /* 字体大小 */
+    transition: all 0.3s ease;
+    /* 所有属性过渡效果 */
+    background-color: transparent;
+    /* 透明背景 */
 }
 
 /* 主导航菜单悬停效果 */
-.main-nav > li:hover > a {
-    background-color: #003d7a; /* 深蓝色背景 */
+.main-nav>li:hover>a {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* 轻微的白色透明背景 */
+    border-bottom: 2px solid #ffffff;
+    /* 底部白色边框 */
 }
 
 /* 二级导航样式 - 下拉菜单 */
 .sub-nav {
-    position: absolute; /* 绝对定位 */
-    top: 100%; /* 位于父元素下方 */
-    left: 0; /* 左对齐 */
-    width: 100%; /* 宽度与父元素相同 */
-    background-color: #f8f9fa; /* 浅灰色背景 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 阴影效果 */
-    opacity: 0; /* 初始透明 */
-    visibility: hidden; /* 初始隐藏 */
-    transform: translateY(10px); /* 初始向下偏移 */
-    transition: all 0.3s ease; /* 过渡效果 */
+    position: absolute;
+    /* 绝对定位 */
+    top: 100%;
+    /* 位于父元素下方 */
+    left: 0;
+    /* 左对齐 */
+    width: 100%;
+    /* 宽度与父元素相同 */
+    background-color: #f8f9fa;
+    /* 浅灰色背景 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* 阴影效果 */
+    opacity: 0;
+    /* 初始透明 */
+    visibility: hidden;
+    /* 初始隐藏 */
+    transform: translateY(10px);
+    /* 初始向下偏移 */
+    transition: all 0.3s ease;
+    /* 过渡效果 */
 }
 
 /* 二级导航显示效果 */
-.main-nav > li:hover .sub-nav {
-    opacity: 1; /* 显示时完全不透明 */
-    visibility: visible; /* 显示时可见 */
-    transform: translateY(0); /* 显示时无偏移 */
+.main-nav>li:hover .sub-nav {
+    opacity: 1;
+    /* 显示时完全不透明 */
+    visibility: visible;
+    /* 显示时可见 */
+    transform: translateY(0);
+    /* 显示时无偏移 */
 }
 
 /* 二级导航链接样式 */
 .sub-nav li a {
-    display: block; /* 块级显示 */
-    padding: 10px; /* 内边距 */
-    color: #333; /* 深灰色文字 */
-    font-size: 14px; /* 字体大小 */
-    border-bottom: 1px solid #eee; /* 底部边框 */
-    transition: background-color 0.3s ease; /* 背景色过渡效果 */
+    display: block;
+    /* 块级显示 */
+    padding: 10px;
+    /* 内边距 */
+    color: #333;
+    /* 深灰色文字 */
+    font-size: 14px;
+    /* 字体大小 */
+    border-bottom: 1px solid #eee;
+    /* 底部边框 */
+    transition: background-color 0.3s ease;
+    /* 背景色过渡效果 */
 }
 
 /* 二级导航最后一项样式 */
 .sub-nav li:last-child a {
-    border-bottom: none; /* 移除底部边框 */
+    border-bottom: none;
+    /* 移除底部边框 */
 }
 
 /* 二级导航链接悬停效果 */
 .sub-nav li a:hover {
-    background-color: #e9ecef; /* 浅灰色背景 */
-    color: #0056b3; /* 蓝色文字 */
+    background-color: #e9ecef;
+    /* 浅灰色背景 */
+    color: #0056b3;
+    /* 蓝色文字 */
 }
 
 /* 响应式设计 - 适配不同屏幕尺寸 */
 
 /* 大屏幕平板电脑 - 宽度小于992px */
 @media (max-width: 992px) {
+
     /* 头部容器改为纵向排列 */
     header .container {
-        flex-direction: column; /* 纵向排列 */
-        align-items: flex-start; /* 左对齐 */
+        flex-direction: column;
+        /* 纵向排列 */
+        align-items: flex-start;
+        /* 左对齐 */
     }
-    
+
     /* 搜索容器样式调整 */
     .search-container {
-        margin-top: 15px; /* 上方外边距 */
-        align-items: flex-start; /* 左对齐 */
-        width: 100%; /* 宽度占满 */
+        margin-top: 15px;
+        /* 上方外边距 */
+        align-items: flex-start;
+        /* 左对齐 */
+        width: 100%;
+        /* 宽度占满 */
     }
-    
+
     /* 搜索表单宽度调整 */
     .search-container form {
-        width: 100%; /* 宽度占满 */
+        width: 100%;
+        /* 宽度占满 */
     }
-    
+
     /* 搜索输入框宽度调整 */
     .search-container input {
-        width: 70%; /* 宽度占比 */
+        width: 70%;
+        /* 宽度占比 */
     }
-    
+
     /* 主导航菜单换行显示 */
     .main-nav {
-        flex-wrap: wrap; /* 允许换行 */
+        flex-wrap: wrap;
+        /* 允许换行 */
     }
-    
+
     /* 主导航菜单项宽度调整为三列 */
-    .main-nav > li {
-        flex: 0 0 33.333%; /* 宽度占比为三分之一 */
+    .main-nav>li {
+        flex: 0 0 33.333%;
+        /* 宽度占比为三分之一 */
     }
 }
 
 /* 中等屏幕手机 - 宽度小于768px */
 @media (max-width: 768px) {
+
     /* 主导航菜单项宽度调整为两列 */
-    .main-nav > li {
-        flex: 0 0 50%; /* 宽度占比为二分之一 */
+    .main-nav>li {
+        flex: 0 0 50%;
+        /* 宽度占比为二分之一 */
     }
 }
 
 /* 小屏幕手机 - 宽度小于576px */
 @media (max-width: 576px) {
+
     /* 主导航菜单项宽度调整为单列 */
-    .main-nav > li {
-        flex: 0 0 100%; /* 宽度占满 */
+    .main-nav>li {
+        flex: 0 0 100%;
+        /* 宽度占满 */
     }
 }

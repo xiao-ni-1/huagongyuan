@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成都理工大学材料与化学化工学院</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "SimSun", Arial, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ====== 三栏主内容区 ====== */
+        .main-section {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            gap: 24px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(30, 84, 148, 0.1);
+            padding: 24px;
+        }
+
+        .main-left {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(30, 84, 148, 0.08);
+            flex: 1;
+            min-width: 0;
+            padding-bottom: 24px;
+            overflow: hidden;
+            /* 防止内容溢出 */
+        }
+
+        .main-center {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(30, 84, 148, 0.08);
+            padding-bottom: 24px;
+            flex: 1.4;
+            min-width: 0;
+            overflow: hidden;
+            /* 防止内容溢出 */
+        }
+
+        .main-right {
+            min-width: 240px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            flex-shrink: 0;
+            /* 防止右侧图片区域被压缩 */
+        }
+
+        /* ====== 区块标题栏 ====== */
+        .section-title {
+            background: #0b4a8b;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 14px 20px 14px 16px;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            align-items: center;
+            border-left: 6px solid #f9b233;
+            margin-bottom: 2px;
+            justify-content: space-between;
+            border-bottom: none;
+            box-shadow: none;
+        }
+
+        .section-title .more-link {
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none !important;
+            font-weight: normal;
+            margin-left: 10px;
+            border-bottom: none !important;
+        }
+
+        .section-title a {
+            text-decoration: none !important;
+            border-bottom: none !important;
+            color: #fff;
+        }
+
+        /* ====== 通知公告、快讯表格 ====== */
+        .notice-list,
+        .news-list {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .notice-list tr,
+        .news-list tr {}
+
+        .notice-list td,
+        .news-list td {
+            padding: 8px 20px;
+            font-size: 15px;
+            vertical-align: middle;
+            height: 32px;
+            box-sizing: border-box;
+        }
+
+        .notice-date,
+        .news-date {
+            color: #2176ae;
+            width: 110px;
+            font-weight: 500;
+            white-space: nowrap;
+            font-size: 15px;
+            vertical-align: middle;
+        }
+
+        .notice-title,
+        .notice-title.normal,
+        .news-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 250px;
+            /* 减小最大宽度以适应容器 */
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 15px;
+            height: 32px;
+        }
+
+        .news-title {
+            max-width: 350px;
+            /* 减小学院快讯的最大宽度 */
+        }
+
+        .news-icon {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            margin-right: 6px;
+            background: url('data:image/svg+xml;utf8,<svg fill="%232176ae" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 17v-2h2v-6H3V7h2V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2h2v2h-2v6h2v2h-2v2a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-2H3zm4 2h10v-2H7v2zm0-4h10v-6H7v6zm0-8v2h10V7H7z"/></svg>') no-repeat center center;
+            background-size: contain;
+            vertical-align: middle;
+        }
+
+        /* ====== 轮播图悬浮层样式 ====== */
+        .carousel-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.65);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 16px;
+            box-sizing: border-box;
+            border-radius: 0 0 8px 8px;
+            z-index: 2;
+        }
+
+        #carousel-caption {
+            font-size: 15px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-right: 15px;
+        }
+
+        .carousel-dots {
+            display: flex;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        .carousel-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 2px;
+            background: #fff;
+            opacity: 0.8;
+            cursor: pointer;
+            transition: background 0.2s, opacity 0.2s;
+        }
+
+        .carousel-dot.active {
+            background: #f9b233;
+            opacity: 1;
+        }
+
+        /* ====== 学院快讯-头条图文 ====== */
+        .featured-news-container {
+            display: flex;
+            gap: 12px;
+            align-items: stretch;
+            padding: 4px 0;
+        }
+
+        .featured-news-image {
+            flex: 0 0 42%;
+            min-width: 0;
+        }
+
+        .featured-news-text {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2px 0;
+        }
+
+        .featured-news-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #c00;
+            line-height: 1.3;
+            margin-bottom: 4px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .featured-news-summary {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.4;
+            margin-bottom: 4px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .featured-news-date {
+            font-size: 13px;
+            color: #2176ae;
+            font-weight: 500;
+            margin-top: auto;
+        }
+
+        /* ====== 右侧五张图片样式 ====== */
+        .side-img {
+            width: 220px;
+            height: 95px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(30, 84, 148, 0.13);
+            background: #eee;
+            margin-bottom: 0;
+            display: block;
+        }
+
+        /* ====== 下方三栏内容区 ====== */
+        .main-bottom {
+            max-width: 1200px;
+            margin: 36px auto 0 auto;
+            display: flex;
+            gap: 32px;
+        }
+
+        .bottom-col {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(30, 84, 148, 0.08);
+            flex: 1;
+            min-width: 0;
+            margin-bottom: 40px;
+        }
+
+        .bottom-title {
+            background: #0b4a8b;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px 18px 12px 14px;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            align-items: center;
+            border-left: 6px solid #f9b233;
+            margin-bottom: 2px;
+            justify-content: space-between;
+        }
+
+        .bottom-title .more-link {
+            color: #fff;
+            font-size: 13px;
+            text-decoration: underline;
+            font-weight: normal;
+            margin-left: 10px;
+        }
+
+        .bottom-list {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .bottom-list tr {
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .bottom-list td {
+            padding: 10px 18px;
+            font-size: 15px;
+            vertical-align: top;
+        }
+
+        .bottom-date {
+            color: #2176ae;
+            width: 100px;
+            font-weight: 500;
+            white-space: nowrap;
+            text-align: right;
+        }
+
+        .bottom-list td:first-child {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 200px;
+            /* 减小底部三栏的文字宽度 */
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* ====== 页脚蓝色信息区 ====== */
+        .footer {
+            background: #0b4a8b;
+            color: #e0e6ee;
+            padding: 32px 0 18px 0;
+            margin-top: 40px;
+            font-size: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .footer .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .footer .footer-info {
+            text-align: left;
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .footer .footer-qr {
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .footer .footer-qr img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 8px;
+            background: #fff;
+            border-radius: 8px;
+        }
+
+        .footer .footer-link {
+            margin: 10px 0 0 0;
+            color: #e0e6ee;
+            font-size: 14px;
+        }
+
+        /* ====== 响应式调整 ====== */
+        @media (max-width: 1300px) {
+
+            .main-section,
+            .main-bottom,
+            .footer .footer-inner {
+                max-width: 98vw;
+                padding: 16px;
+                /* 减少内边距 */
+            }
+
+            .notice-title,
+            .notice-title.normal {
+                max-width: 200px;
+                /* 进一步减小宽度 */
+            }
+
+            .news-title {
+                max-width: 280px;
+            }
+
+            .bottom-list td:first-child {
+                max-width: 150px;
+            }
+        }
+
+        @media (max-width: 900px) {
+
+            .main-section,
+            .main-bottom,
+            .footer .footer-inner {
+                flex-direction: column;
+                gap: 0;
+                padding: 12px;
+                /* 进一步减少内边距 */
+            }
+
+            .main-right {
+                flex-direction: row;
+                gap: 8px;
+                justify-content: center;
+            }
+
+            .side-img {
+                width: 120px;
+                height: 50px;
+            }
+
+            .notice-title,
+            .notice-title.normal,
+            .news-title {
+                max-width: 180px;
+                /* 移动端进一步减小 */
+            }
+
+            .bottom-list td:first-child {
+                max-width: 120px;
+            }
+        }
+
+        /* ====== 链接样式 ====== */
+        a {
+            text-decoration: none !important;
+            /* 去除下划线 */
+            color: inherit;
+            /* 继承父元素颜色 */
+        }
+
+        a:hover {
+            text-decoration: none !important;
+            /* 悬停时也不显示下划线 */
+        }
+
+        .more-link {
+            color: #1e5494;
+            font-size: 14px;
+            font-weight: normal;
+            text-decoration: none !important;
+        }
+
+        .more-link:hover {
+            color: #0d3a6b;
+            text-decoration: none !important;
+        }
+
+        /* ====== 可点击元素样式 ====== */
+        .notice-title,
+        .news-title,
+        .bottom-list td:first-child,
+        .side-img,
+        .carousel-slide,
+        .featured-news-container {
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .notice-title:hover,
+        .news-title:hover,
+        .bottom-list td:first-child:hover {
+            opacity: 0.8;
+        }
+
+        .side-img:hover,
+        .carousel-slide:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+            transition: all 0.2s ease;
+        }
+
+        /* ====== 轮播图样式 ====== */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(30, 84, 148, 0.13);
+            margin-bottom: 4px;
+        }
+
+        .carousel-slide {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ====== 三栏主内容区（通知公告、学院快讯、右侧图片） ====== -->
+    <div class="main-section">
+        <!-- ====== 通知公告 ====== -->
+        <div class="main-left">
+            <div class="section-title">通知公告 <a href="#" class="more-link">+更多</a></div>
+            <table class="notice-list">
+                <tr onclick="window.location.href='#'">
+                    <td class="notice-date">2025.06.23</td>
+                    <td class="notice-title">材料与化学化工学院2025年师资招聘启事</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="notice-date">2025.07.02</td>
+                    <td class="notice-title normal">关于锂资源与锂电产业学院2025年"锂电创新人才培养计划"通知</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="notice-date">2025.06.03</td>
+                    <td class="notice-title normal">材料与化学化工学院（锂资源与锂电产业学院）2025年硕士研究生招生简章</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="notice-date">2025.04.21</td>
+                    <td class="notice-title normal">成都理工大学材料与化学化工学院（锂电池材料研究中心）开放课题申请指南</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="notice-date">2025.04.18</td>
+                    <td class="notice-title normal">成都理工大学材料与化学化工学院（锂电技术实验室）暑期开放安排</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="notice-date">2025.04.09</td>
+                    <td class="notice-title normal">材料与化学化工学院（锂资源与锂电产业学院）学术讲座通知</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="notice-date">2025.04.07</td>
+                    <td class="notice-title normal">关于举行成都理工大学第十一届"恒宇杯"金相技能大赛的通知</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="notice-date">2025.04.02</td>
+                    <td class="notice-title normal">成都理工大学材料与化学化工学院（锂电材料研究所）项目申报指南</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="notice-date">2025.03.30</td>
+                    <td class="notice-title normal">材料与化学化工学院（锂资源与锂电产业学院）实验室安全培训安排</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="notice-date">2025.03.25</td>
+                    <td class="notice-title normal">成都理工大学材料与化学化工学院（锂电池技术研究中心）科研项目招标公告</td>
+                </tr>
+            </table>
+        </div>
+        <!-- ====== 学院快讯 ====== -->
+        <div class="main-center">
+            <div class="section-title">学院快讯 <a href="#" class="more-link">+更多</a></div>
+            <table class="news-list">
+                <tr onclick="window.location.href='#'">
+                    <td colspan="2" style="padding-bottom: 12px; border-bottom: 1px solid #eee;">
+                        <div class="featured-news-container" onclick="window.location.href='#'">
+                            <div class="featured-news-image">
+                                <div class="carousel-container">
+                                    <img class="carousel-slide active" src="https://picsum.photos/420/120?random=2"
+                                        alt="快讯1" onclick="window.location.href='#'">
+                                    <img class="carousel-slide" src="https://picsum.photos/420/120?random=3" alt="快讯2"
+                                        onclick="window.location.href='#'">
+                                    <img class="carousel-slide" src="https://picsum.photos/420/120?random=4" alt="快讯3"
+                                        onclick="window.location.href='#'">
+                                    <div class="carousel-overlay">
+                                        <span id="carousel-caption">改革开放再出发 立足岗位做贡献</span>
+                                        <div class="carousel-dots">
+                                            <span class="carousel-dot active"></span>
+                                            <span class="carousel-dot"></span>
+                                            <span class="carousel-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="featured-news-text">
+                                <div class="featured-news-title">《盐湖化工》课程入选教育部在线教育研究中心2024"拓金计划"</div>
+                                <div class="featured-news-summary">
+                                    近日，教育部在线教育研究中心正式公布了2024"拓金计划"第二批示范课程入选名单，全国高校共有69门课程入选，其中我院于旭东老师主讲的《盐湖化工》课程成功入选。
+                                </div>
+                                <div class="featured-news-date">2024.11.15</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="news-title"><span class="news-icon"></span>学院召开2025年春季学期期末教职工大会</td>
+                    <td class="news-date">2025.07.11</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="news-title"><span class="news-icon"></span>学院召开中国国际大学生创新大赛（2025）省赛决赛出征活动暨动员大会</td>
+                    <td class="news-date">2025.07.10</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="news-title"><span class="news-icon"></span>学院召开2026年研究生招生宣讲会</td>
+                    <td class="news-date">2025.07.03</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="news-title"><span class="news-icon"></span>深粉化学世界 启迪科学梦想——学院暨佳副教授走进大弯中学开展科普讲座</td>
+                    <td class="news-date">2025.06.30</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="news-title"><span class="news-icon"></span>学校党委书记刘清友一行赴黑水县走访慰问我院驻村干部</td>
+                    <td class="news-date">2025.06.24</td>
+                </tr>
+            </table>
+        </div>
+        <!-- ====== 右侧五张图片 ====== -->
+        <div class="main-right">
+            <img class="side-img" src="https://picsum.photos/220/95?random=11" alt="side1"
+                onclick="window.location.href='#'">
+            <img class="side-img" src="https://picsum.photos/220/95?random=12" alt="side2"
+                onclick="window.location.href='#'">
+            <img class="side-img" src="https://picsum.photos/220/95?random=13" alt="side3"
+                onclick="window.location.href='#'">
+            <img class="side-img" src="https://picsum.photos/220/95?random=14" alt="side4"
+                onclick="window.location.href='#'">
+            <img class="side-img" src="https://picsum.photos/220/95?random=15" alt="side5"
+                onclick="window.location.href='#'">
+        </div>
+    </div>
+    <!-- ====== 下方横幅图片 ====== -->
+    <div style="max-width:1200px;margin:36px auto 0 auto;">
+        <img src="https://picsum.photos/1200/180?random=21" alt="学术风采" onclick="window.location.href='#'"
+            style="width:100%;height:180px;object-fit:cover;border-radius:10px;box-shadow:0 2px 8px rgba(30,84,148,0.13);cursor:pointer;">
+    </div>
+    <!-- ====== 下方三栏内容区（学术动态/党建工作/人才培养） ====== -->
+    <div class="main-bottom">
+        <div class="bottom-col">
+            <div class="bottom-title">学术动态 <a href="#" class="more-link">+更多</a></div>
+            <table class="bottom-list">
+                <tr onclick="window.location.href='#'">
+                    <td>材化大讲堂——刘旺文教授学术报告会</td>
+                    <td class="bottom-date">2025.06.26</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>材化大讲堂——旦超教授学术报告会</td>
+                    <td class="bottom-date">2025.06.19</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>材化大讲堂——王胜胜教授学术报告会</td>
+                    <td class="bottom-date">2025.05.08</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>材化大讲堂——张荣帮副教授学术报告会</td>
+                    <td class="bottom-date">2025.05.08</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>材化大讲堂——周英东研究员学术报告会</td>
+                    <td class="bottom-date">2025.04.28</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>材化大讲堂——陈曦研究员学术报告会</td>
+                    <td class="bottom-date">2025.04.28</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>材化大讲堂——王光凯研究员学术报告会</td>
+                    <td class="bottom-date">2025.04.22</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>材化大讲堂——沈俊典副研究员学术报告会</td>
+                    <td class="bottom-date">2025.04.22</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>材化大讲堂——宋柏雨副教授学术报告会</td>
+                    <td class="bottom-date">2025.04.22</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>材化大讲堂——邓敏副教授学术报告会</td>
+                    <td class="bottom-date">2025.04.22</td>
+                </tr>
+            </table>
+        </div>
+        <div class="bottom-col">
+            <div class="bottom-title">党建工作 <a href="#" class="more-link">+更多</a></div>
+            <table class="bottom-list">
+                <tr onclick="window.location.href='#'">
+                    <td>学院举行新发展党员入党宣誓仪式</td>
+                    <td class="bottom-date">2025.06.30</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>专硕研究生第一党支部召开深入贯彻中...</td>
+                    <td class="bottom-date">2025.06.25</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>学院开展2025届毕业生党员离校教育</td>
+                    <td class="bottom-date">2025.06.24</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>学院召开深入贯彻中央八项规定精神学...</td>
+                    <td class="bottom-date">2025.06.24</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>学院学硕研究生第三党支部、专硕研究...</td>
+                    <td class="bottom-date">2025.06.20</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>化学工程与工艺本科生党支部召开深入...</td>
+                    <td class="bottom-date">2025.06.17</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>学院党委理论中心组开展深入贯彻中央...</td>
+                    <td class="bottom-date">2025.06.17</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>学院赴乐至开展"深入贯彻中央八项规...</td>
+                    <td class="bottom-date">2025.06.09</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>严守八项规定 铸就党性修养——2023级...</td>
+                    <td class="bottom-date">2025.04.25</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>学院举行2025年上半年党校培训班开班...</td>
+                    <td class="bottom-date">2025.04.03</td>
+                </tr>
+            </table>
+        </div>
+        <div class="bottom-col">
+            <div class="bottom-title">人才培养 <a href="#" class="more-link">+更多</a></div>
+            <table class="bottom-list">
+                <tr onclick="window.location.href='#'">
+                    <td>教学成果奖</td>
+                    <td class="bottom-date">2025.06.13</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>精品课程</td>
+                    <td class="bottom-date">2025.06.13</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>教材出版</td>
+                    <td class="bottom-date">2025.06.13</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>质量工程</td>
+                    <td class="bottom-date">2025.06.13</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>课程思政</td>
+                    <td class="bottom-date">2025.06.13</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>校级课程改革试点</td>
+                    <td class="bottom-date">2025.06.13</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td>金课建设</td>
+                    <td class="bottom-date">2025.06.13</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- ====== 页脚蓝色信息区 ====== -->
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <div>学校地址：成都市成华区二仙桥东三路1号　邮政编码：610059</div>
+                <div>联系电话：办公室：(028)84078940　教务科：(028)84078937</div>
+                <div>学生科：(028)84077271　研究生调剂咨询电话：(028)84079525</div>
+                <div class="footer-link">©2025 成都理工大学材料与化学化工学院 版权所有</div>
+            </div>
+            <div class="footer-qr">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://cmcc.cdut.edu.cn/"
+                    alt="官方微信">
+                <div>官方微信</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // ====== 轮播图JS ======
+        (function () {
+            var slides = document.querySelectorAll('.carousel-slide');
+            var dots = document.querySelectorAll('.carousel-dot');
+            var captions = [
+                '改革开放再出发 立足岗位做贡献',
+                '创新引领发展 共筑美好未来',
+                '青春逐梦 扬帆起航新征程'
+            ];
+            var captionEl = document.getElementById('carousel-caption');
+            var idx = 0;
+            function showSlide(i) {
+                slides.forEach(function (s, j) {
+                    s.classList.toggle('active', j === i);
+                });
+                dots.forEach(function (d, j) {
+                    d.classList.toggle('active', j === i);
+                });
+                if (captionEl) captionEl.textContent = captions[i];
+                idx = i;
+            }
+            function nextSlide() {
+                showSlide((idx + 1) % slides.length);
+            }
+            var timer = setInterval(nextSlide, 3000);
+            dots.forEach(function (dot, i) {
+                dot.onclick = function () {
+                    showSlide(i);
+                    clearInterval(timer);
+                    timer = setInterval(nextSlide, 3000);
+                };
+            });
+        })();
+    </script>
+</body>
+
+</html>
