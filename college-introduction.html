@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学院简介 - 化学工程学院</title>
+    <style type="text/css">
+        /* 引入毛泽东字体 */
+        @font-face {
+            font-family: 'MaoZedongFont';
+            src: url('../static/maogao.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    <!-- 顶部导航栏 -->
+    <style type="text/css">
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 去除所有链接的下划线 */
+        a {
+            text-decoration: none;
+        }
+
+        /* 确保链接悬停时也不显示下划线 */
+        a:hover {
+            text-decoration: none;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* 顶部导航栏样式 */
+        .header {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1000;
+
+        }
+
+        /* 导航栏渐变蒙版 */
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #19608b;
+            background: linear-gradient(to bottom, rgba(50, 116, 216, 0.9), rgba(255, 255, 255, 0.1));
+            z-index: 1000;
+            background: url('./opacity.png') no-repeat center;
+            background-size: 100% 100%;
+            /* 设置背景图片高度为容器高度 */
+            pointer-events: none;
+        }
+
+        .header_container_bk {
+            position: absolute;
+            z-index: inherit;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .header_container {
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 70vw;
+        }
+
+        /* 贵工程logo容器 */
+        .logo_section {
+            display: flex;
+            align-items: center;
+            color: white;
+            /* 禁止鼠标选择文字 */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .left_ggcbk {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            /* 禁止鼠标选择文字 */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .left_ggc {
+            position: relative;
+            /* 禁止鼠标选择文字 */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .ggc_logo {
+            position: relative;
+            height: 78px;
+            width: 78px;
+            /* 禁止鼠标选择文字 */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .right_ggc {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 禁止鼠标选择文字 */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .maozedong_font {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            /* 禁止鼠标选择文字 */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .ggc_name_chinese {
+            position: relative;
+            font-family: 'MaoZedongFont';
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            /* 禁止鼠标选择文字 */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .ggc_name_en {
+            position: relative;
+            margin-top: 4px;
+            font-family: 'MaoZedongFont';
+            font-size: 10px;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            line-height: 1.5;
+            /* 禁止鼠标选择文字 */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .leftSeaTtitle {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            /* 禁止鼠标选择文字 */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .hxgcxy_bk {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            justify-content: center;
+            /* 禁止鼠标选择文字 */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .ggy_name_chinese {
+            position: relative;
+            font-family: 'MaoZedongFont';
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            /* 禁止鼠标选择文字 */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .ggy_name_en {
+            position: relative;
+            margin-top: 4px;
+            font-family: 'MaoZedongFont';
+            font-size: 10px;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            line-height: 1.5;
+            /* 禁止鼠标选择文字 */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .home_logo_container {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            /* 禁止鼠标选择文字 */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .search_section {
+            display: flex;
+            align-items: center;
+        }
+
+        .search_input {
+            width: 200px;
+            height: 35px;
+            padding: 0 15px;
+            border: none;
+            border-radius: 10px 0 0 10px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .search_btn {
+            height: 35px;
+            width: 45px;
+            border: none;
+            background: #fff;
+            border-radius: 0 10px 10px 0;
+            cursor: pointer;
+            font-size: 16px;
+            color: #2989d8;
+        }
+
+        .search_btn:hover {
+            background: #f0f0f0;
+        }
+
+        /* 主导航菜单背景 */
+        .main_nav_bk {
+            position: relative;
+            z-index: 1001;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 主导航菜单样式 */
+        .main_nav {
+            position: relative;
+            margin-top: 10px;
+            z-index: 1002;
+            line-height: 56px;
+            width: 70vw;
+        }
+
+        .nav_list {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            list-style: none;
+            padding: 0 20px;
+        }
+
+        .nav_item {
+            position: relative;
+            float: left;
+            width: 8.3333%;
+            text-align: center;
+            z-index: 10;
+            font-size: 18px;
+        }
+
+        .nav_link {
+            display: block;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 56px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .nav_link:hover {
+            background: #0c5685;
+            color: #fff;
+        }
+
+        /* 下拉箭头样式 */
+        .dropdown_arrow {
+            font-size: 10px;
+            margin-left: 5px;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+        }
+
+        .nav_dropdown:hover .dropdown_arrow {
+            transform: rotate(180deg);
+        }
+
+        /* 箭头收起动画 */
+        .nav_dropdown .dropdown_arrow {
+            transform: rotate(0deg);
+        }
+
+        /* 二级下拉菜单样式 */
+        .dropdown {
+            position: absolute;
+            left: 0;
+            top: 99%;
+            min-width: 100%;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            max-height: 0;
+        }
+
+        .dropdown ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown li {
+            float: none;
+            width: 100%;
+            padding: 0;
+            line-height: 48px;
+            overflow: hidden;
+            font-size: 14px;
+            background: #fff;
+            position: relative;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* 下拉菜单子项延迟动画 */
+        .nav_item:hover .dropdown li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .nav_item:hover .dropdown li:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .nav_item:hover .dropdown li:nth-child(2) {
+            transition-delay: 0.15s;
+        }
+
+        .nav_item:hover .dropdown li:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+
+        .nav_item:hover .dropdown li:nth-child(4) {
+            transition-delay: 0.25s;
+        }
+
+        .nav_item:hover .dropdown li:nth-child(5) {
+            transition-delay: 0.3s;
+        }
+
+        .dropdown .text {
+            display: block;
+            padding: 0;
+        }
+
+        .dropdown_link {
+            display: block;
+            white-space: nowrap;
+            padding: 0 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .dropdown li:hover {
+            background: #f0a108;
+        }
+
+        .dropdown li:hover .dropdown_link {
+            color: #fff;
+        }
+
+        /* 导航项悬停效果 */
+        .nav_item:hover:not(.on) {
+            z-index: 11;
+            background: #0c5685;
+        }
+
+        .nav_item:hover:not(.on) .nav_link {
+            color: #fff;
+        }
+
+        /* 导航项当前状态 - 最高优先级 */
+        .nav_item.on,
+        .nav_item.on:hover {
+            z-index: 12 !important;
+            background: #0c5685 !important;
+        }
+
+        .nav_item.on .nav_link,
+        .nav_item.on:hover .nav_link {
+            background: #0c5685 !important;
+            color: #fff !important;
+        }
+
+        .nav_item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            max-height: 300px;
+        }
+
+        .nav_item:hover .dropdown .dropdown_link {
+            color: #333;
+        }
+
+        .nav_item:hover .dropdown .dropdown_link:hover {
+            color: #fff;
+        }
+
+        /* 清除浮动 */
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* 包装容器 */
+        .banner {
+            position: relative;
+            z-index: 999;
+        }
+
+        /* 轮播图区域样式 */
+        .banner_section {
+            position: relative;
+            height: 632px;
+            overflow: hidden;
+        }
+
+        .banner_container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .banner_slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .banner_slide.active {
+            opacity: 1;
+        }
+
+        .banner_img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%231e5799"/><stop offset="100%" stop-color="%237db9e8"/></linearGradient></defs><rect width="1200" height="400" fill="url(%23bg)"/><g opacity="0.3"><circle cx="200" cy="100" r="50" fill="%23fff"/><circle cx="400" cy="200" r="30" fill="%23fff"/><circle cx="800" cy="150" r="40" fill="%23fff"/><circle cx="1000" cy="250" r="35" fill="%23fff"/></g><text x="600" y="180" text-anchor="middle" font-size="48" fill="%23fff" font-weight="bold">化学工程学院</text><text x="600" y="220" text-anchor="middle" font-size="24" fill="%23fff">COLLEGE OF CHEMICAL ENGINEERING</text></svg>') no-repeat center;
+            background-size: cover;
+        }
+
+        .banner_dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: white;
+        }
+
+        /* 主导航菜单背景 */
+        .main_nav_bk {
+            position: relative;
+            z-index: 1000;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 主导航菜单样式 */
+        .main_nav {
+            position: relative;
+            margin-top: 10px;
+            z-index: 3;
+            line-height: 56px;
+            width: 70vw;
+        }
+
+        .nav_list {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            list-style: none;
+            padding: 0 20px;
+        }
+
+        .nav_item {
+            position: relative;
+            float: left;
+            width: 8.3333%;
+            text-align: center;
+            z-index: 10;
+            font-size: 18px;
+        }
+
+        .nav_link {
+            display: block;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 56px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .nav_link:hover {
+            background: #0c5685;
+            color: #fff;
+        }
+
+        /* 下拉箭头样式 */
+        .dropdown_arrow {
+            font-size: 10px;
+            margin-left: 5px;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+        }
+
+        .nav_dropdown:hover .dropdown_arrow {
+            transform: rotate(180deg);
+        }
+
+        /* 箭头收起动画 */
+        .nav_dropdown .dropdown_arrow {
+            transform: rotate(0deg);
+        }
+
+        /* 二级下拉菜单样式 */
+        .dropdown {
+            position: absolute;
+            left: 0;
+            top: 99%;
+            min-width: 100%;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            max-height: 0;
+        }
+
+        .dropdown ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown li {
+            float: none;
+            width: 100%;
+            padding: 0;
+            line-height: 48px;
+            overflow: hidden;
+            font-size: 14px;
+            background: #fff;
+            position: relative;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* 下拉菜单子项延迟动画 */
+        .nav_item:hover .dropdown li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .nav_item:hover .dropdown li:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .nav_item:hover .dropdown li:nth-child(2) {
+            transition-delay: 0.15s;
+        }
+
+        .nav_item:hover .dropdown li:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+
+        .nav_item:hover .dropdown li:nth-child(4) {
+            transition-delay: 0.25s;
+        }
+
+        .nav_item:hover .dropdown li:nth-child(5) {
+            transition-delay: 0.3s;
+        }
+
+        .dropdown .text {
+            display: block;
+            padding: 0;
+        }
+
+        .dropdown_link {
+            display: block;
+            white-space: nowrap;
+            padding: 0 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .dropdown li:hover {
+            background: #f0a108;
+        }
+
+        .dropdown li:hover .dropdown_link {
+            color: #fff;
+        }
+
+        /* 导航项悬停效果 */
+        .nav_item:hover {
+            z-index: 11;
+            background: #0c5685;
+        }
+
+        .nav_item:hover .nav_link {
+            color: #fff;
+        }
+
+        .nav_item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            max-height: 300px;
+        }
+
+        .nav_item:hover .dropdown .dropdown_link {
+            color: #333;
+        }
+
+        .nav_item:hover .dropdown .dropdown_link:hover {
+            color: #fff;
+        }
+
+        /* 清除浮动 */
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* 包装容器 */
+        .banner {
+            position: relative;
+            z-index: 999;
+        }
+
+        /* 轮播图区域样式 */
+        .banner_section {
+            position: relative;
+            height: 632px;
+            overflow: hidden;
+        }
+
+        .banner_container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .banner_slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .banner_slide.active {
+            opacity: 1;
+        }
+
+        .banner_img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%231e5799"/><stop offset="100%" stop-color="%237db9e8"/></linearGradient></defs><rect width="1200" height="400" fill="url(%23bg)"/><g opacity="0.3"><circle cx="200" cy="100" r="50" fill="%23fff"/><circle cx="400" cy="200" r="30" fill="%23fff"/><circle cx="800" cy="150" r="40" fill="%23fff"/><circle cx="1000" cy="250" r="35" fill="%23fff"/></g><text x="600" y="180" text-anchor="middle" font-size="48" fill="%23fff" font-weight="bold">化学工程学院</text><text x="600" y="220" text-anchor="middle" font-size="24" fill="%23fff">COLLEGE OF CHEMICAL ENGINEERING</text></svg>') no-repeat center;
+            background-size: cover;
+        }
+
+        .banner_dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: white;
+        }
+
+        /* ====== 页面内容样式 ====== */
+        .main_content {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .content_container {
+            display: flex;
+            min-height: 600px;
+        }
+
+        /* 左侧导航菜单 */
+        .left_sidebar {
+            width: 250px;
+            background: #f8f9fa;
+            border-right: 1px solid #e9ecef;
+        }
+
+        .sidebar_header {
+            background: linear-gradient(135deg, #2c5aa0, #1e3a8a);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .sidebar_menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar_menu li {
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .sidebar_menu a {
+            display: block;
+            padding: 15px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .sidebar_menu a:hover {
+            background: #e9ecef;
+            color: #2c5aa0;
+            padding-left: 25px;
+        }
+
+        .sidebar_menu a.active {
+            background: #2c5aa0;
+            color: white;
+            border-left: 4px solid #1e3a8a;
+        }
+
+        /* 右侧内容区域 */
+        .right_content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        /* 面包屑导航 */
+        .breadcrumb {
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .breadcrumb a {
+            color: #2c5aa0;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #666;
+            margin: 0 5px;
+        }
+
+        /* 页面标题 */
+        .page_title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #2c5aa0;
+            position: relative;
+        }
+
+        .page_title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #ff9500;
+        }
+
+        /* 内容区域 */
+        .content_text {
+            line-height: 1.8;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .content_text p {
+            margin-bottom: 15px;
+            text-indent: 2em;
+        }
+
+        .content_text h3 {
+            color: #2c5aa0;
+            margin: 25px 0 15px 0;
+            font-size: 18px;
+        }
+
+        /* 底部信息 */
+        .content_footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+            color: #666;
+            font-size: 14px;
+            text-align: right;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .content_container {
+                flex-direction: column;
+            }
+
+            .left_sidebar {
+                width: 100%;
+            }
+
+            .main_content {
+                margin: 10px;
+            }
+
+            .right_content {
+                padding: 20px;
+            }
+
+            .page_title {
+                font-size: 24px;
+            }
+        }
+
+        /* ====== 页脚样式 ====== */
+        .middle1-footer {
+            background: #1e5494;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .middle1-footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .middle1-footer-nav {
+            display: flex;
+            gap: 40px;
+        }
+
+        .middle1-footer-nav-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .middle1-footer-link {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .middle1-footer-link:hover {
+            color: white;
+        }
+
+        .middle1-footer-contact {
+            flex: 1;
+            margin: 0 40px;
+        }
+
+        .middle1-contact-item {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .middle1-footer-qr {
+            text-align: center;
+        }
+
+        .middle1-qr-code {
+            margin-bottom: 10px;
+        }
+
+        .middle1-qr-text {
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .middle1-footer-bottom {
+            background: #0f3a5f;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .middle1-footer-bottom p {
+            margin: 0;
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* 响应式设计 - 页脚 */
+        @media (max-width: 768px) {
+            .middle1-footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .middle1-footer-nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .middle1-footer-contact {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="header_container_bk">
+            <div class="header_container">
+                <div class="logo_section">
+                    <!-- 贵工程logo容器 -->
+                    <div class="left_ggcbk">
+                        <div class="home_logo_container">
+                            <div class="left_ggc">
+                                <a class="a_blank" href="https://www.gues.edu.cn/index.htm" target="_blank">
+                                    <img class="ggc_logo" src="./ggc_logo.png" />
+                                </a>
+                            </div>
+                            <div class="right_ggc">
+                                <div class="maozedong_font">
+                                    <a href="https://www.gues.edu.cn/index.htm" target="_blank">
+                                        <span class="ggc_name_chinese">贵州工程应用技术学院</span>
+                                    </a>
+                                    <span class="ggc_name_en">GUIZHOU UNIVERSITY OF ENGINEERING SCIENCE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leftSeaTtitle">
+                            <div class="hxgcxy_bk">
+                                <span class="ggy_name_chinese">化学工程学院</span>
+                                <span class="ggy_name_en">COLLEGE OF CHEMICAL ENGINEERING</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search_section">
+                    <input type="text" placeholder="请输入关键词" class="search_input">
+                    <button class="search_btn">🔍</button>
+                </div>
+            </div>
+            <!-- 主导航菜单 -->
+            <div class="main_nav_bk">
+                <nav class="main_nav">
+                    <ul class="nav_list clearfix">
+                        <li class="nav_item"><a href="index.html" class="nav_link">学院首页</a></li>
+
+                        <li class="nav_item nav_dropdown on">
+                            <a href="college-introduction.html" class="nav_link">学院概况</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li>
+                                        <div class="text"><a href="college-introduction.html"
+                                                class="dropdown_link">学院简介</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="college-leadership.html"
+                                                class="dropdown_link">学院领导</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="college-organization.html"
+                                                class="dropdown_link">机构设置</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">院务公开</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav_item nav_dropdown">
+                            <a href="xkzy.html" class="nav_link">学科专业</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li>
+                                        <div class="text"><a href="xkzy.html" class="dropdown_link">本科专业</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">博士点</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">硕士点</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav_item nav_dropdown">
+                            <a href="szdw.html" class="nav_link">师资队伍</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li>
+                                        <div class="text"><a href="szdw.html" class="dropdown_link">师资概况</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">教师名录</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">人才招聘</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav_item"><a href="ptjs.html" class="nav_link">平台建设</a></li>
+
+                        <li class="nav_item nav_dropdown">
+                            <a href="kxyj.html" class="nav_link">科学研究</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">科研方向</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">科研团队</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">学术交流</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">科研成果</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">成果转化</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav_item nav_dropdown">
+              <a href="djgz.html" class="nav_link">党建工作</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">党建动态</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">主题教育专栏</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">学习资料</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav_item nav_dropdown">
+              <a href="jxgz.html" class="nav_link">教学工作</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">教学平台</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">教学改革</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">教学活动</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">实习基地</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav_item nav_dropdown">
+                            <a href="xsgz.html" class="nav_link">学生工作</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li>
+                                        <div class="text"><a href="xsgz.html" class="dropdown_link">学工动态</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">学生公寓党员工作站</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">团学工作</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav_item nav_dropdown">
+              <a href="zsjy.html" class="nav_link">招生就业</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">招生宣传</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">就业工作</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav_item nav_dropdown">
+              <a href="cxcy.html" class="nav_link">创新创业</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">菁英计划</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">成果展示</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav_item nav_dropdown">
+              <a href="fzll.html" class="nav_link">发展联络</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">校友会</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">交流合作</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="text"><a href="#" class="dropdown_link">联系我们</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- 轮播图区域 -->
+        <div class="banner">
+            <section class="banner_section">
+                <div class="banner_container">
+                    <div class="banner_slide active">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1200&h=400&fit=crop&crop=center"
+                            alt="学院活动" class="banner_img">
+                    </div>
+                </div>
+                <div class="banner_dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <!-- 主内容区域 -->
+    <main class="main_content">
+        <div class="content_container">
+            <!-- 左侧导航菜单 -->
+            <aside class="left_sidebar">
+                <div class="sidebar_header">
+                    学院概况
+                </div>
+                <ul class="sidebar_menu">
+                    <li><a href="college-introduction.html" class="active">学院简介</a></li>
+                    <li><a href="college-leadership.html">学院领导</a></li>
+                    <li><a href="college-organization.html">机构设置</a></li>
+                    <li><a href="#">院务公开</a></li>
+                </ul>
+            </aside>
+
+            <!-- 右侧内容区域 -->
+            <section class="right_content">
+                <!-- 面包屑导航 -->
+                <nav class="breadcrumb">
+                    <a href="index.html">首页</a>
+                    <span>></span>
+                    <a href="college-introduction.html">学院概况</a>
+                    <span>></span>
+                    <span>学院简介</span>
+                </nav>
+
+                <!-- 页面标题 -->
+                <h1 class="page_title">学院简介</h1>
+
+                <!-- 内容区域 -->
+                <div class="content_text">
+                    <p>化学工程学院是贵州工程应用技术学院（原毕节学院）重要组成部分，1985年建校即设立"化学系"，1995年更名为"化学工程系"，2008年更名为"化学工程学院"。2023年化学工程与工艺专业通过教育部工程教育专业认证。
+                    </p>
+
+                    <p>学院设有化学工程与工艺、应用化学、材料化学、化学（师范）四个本科专业和化学工程与技术一级学科硕士学位授权点，化学工程、材料与化工两个专业学位硕士授权点。化学工程与技术学科是贵州省区域内一流建设学科、贵州省特色重点学科，化学工程与工艺专业是国家级一流本科专业建设点、贵州省一流专业。
+                    </p>
+
+                    <h3>办学历史悠久，积淀深厚</h3>
+                    <p>学院始建于1985年，经过近40年的发展建设，已形成了完整的人才培养体系。学院秉承"厚德博学、范行求真"的校训，坚持"立德树人"根本任务，致力于培养具有创新精神和实践能力的高素质应用型人才。
+                    </p>
+
+                    <h3>师资力量雄厚，结构合理</h3>
+                    <p>学院现有教职工85人，其中，专任教师68人，教授13人，副教授26人，博士学位教师45人，硕士生导师32人。拥有贵州省核心专家1人、贵州省管专家2人、贵州省优秀青年科技人才2人、贵州省千层次创新型人才6人、四川大学兼职博士生导师1人、贵州大学兼职博士生导师2人、贵州师范大学兼职硕士生导师4人。
+                    </p>
+
+                    <h3>学科专业特色鲜明</h3>
+                    <p>学院立足贵州省"工业强省"战略，围绕贵州省煤化工、磷化工、铝及铝加工、新材料等支柱产业和战略性新兴产业，形成了以化学工程与技术为主干，材料科学与工程、环境科学与工程等相关学科协调发展的学科专业体系。
+                    </p>
+
+                    <h3>科研实力不断增强</h3>
+                    <p>学院拥有"贵州省煤洁净利用重点实验室"等一批科研平台，承担国家自然科学基金项目、省部级科研项目等各类科研项目100余项，获得省部级科技奖励10余项，发表高水平学术论文300余篇，获得发明专利50余项。
+                    </p>
+
+                    <h3>人才培养质量稳步提升</h3>
+                    <p>学院坚持以学生为中心，深化教育教学改革，不断提高人才培养质量。近年来，学生在各类学科竞赛中获得国家级奖励30余项，省级奖励100余项。毕业生就业率保持在90%以上，考研录取率逐年提升。</p>
+
+                    <p>面向未来，学院将继续秉承"服务地方、特色发展"的办学理念，坚持内涵发展，不断提升办学水平和人才培养质量，努力建设成为特色鲜明、优势突出的高水平化学工程学院。</p>
+                </div>
+
+                <!-- 底部信息 -->
+                <div class="content_footer">
+                    <p>更新时间：2024年5月</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ====== 页脚 ====== -->
+    <footer class="middle1-footer">
+        <div class="middle1-footer-content">
+            <!-- 左侧导航链接 -->
+            <div class="middle1-footer-nav">
+                <div class="middle1-footer-nav-column">
+                    <a href="college-introduction.html" class="middle1-footer-link">学院概况</a>
+                    <a href="szdw.html" class="middle1-footer-link">师资队伍</a>
+                    <a href="#" class="middle1-footer-link">学科建设</a>
+                </div>
+                <div class="middle1-footer-nav-column">
+                    <a href="#" class="middle1-footer-link">本科教育</a>
+                    <a href="#" class="middle1-footer-link">研究生教育</a>
+                    <a href="#" class="middle1-footer-link">科学研究</a>
+                </div>
+                <div class="middle1-footer-nav-column">
+                    <a href="xsgz.html" class="middle1-footer-link">学生工作</a>
+                    <a href="djgz.html" class="middle1-footer-link">党建工作</a>
+                    <a href="#" class="middle1-footer-link">校友工作</a>
+                </div>
+                <div class="middle1-footer-nav-column">
+                    <a href="#" class="middle1-footer-link">合作交流</a>
+                    <a href="zsjy.html" class="middle1-footer-link">招生就业</a>
+                    <a href="#" class="middle1-footer-link">联系我们</a>
+                </div>
+            </div>
+
+            <!-- 中间联系信息 -->
+            <div class="middle1-footer-contact">
+                <div class="middle1-contact-item">
+                    <strong>地址：</strong>贵州省毕节市七星关区学院路1号
+                </div>
+                <div class="middle1-contact-item">
+                    <strong>邮编：</strong>551700
+                </div>
+                <div class="middle1-contact-item">
+                    <strong>电话：</strong>(0857)8331100
+                </div>
+                <div class="middle1-contact-item">
+                    <strong>传真：</strong>(0857)8331100
+                </div>
+                <div class="middle1-contact-item">
+                    <strong>邮箱：</strong>hxgcxy@gues.edu.cn
+                </div>
+            </div>
+
+            <!-- 右侧微信公众号 -->
+            <div class="middle1-footer-qr">
+                <div class="middle1-qr-code">
+                    <svg width="80" height="80" viewBox="0 0 80 80">
+                        <!-- 简单的占位图片 -->
+                        <rect width="80" height="80" fill="#f0f0f0" stroke="#ddd" stroke-width="1" rx="4" />
+                        <circle cx="40" cy="30" r="12" fill="#ccc" />
+                        <rect x="20" y="50" width="40" height="20" fill="#ccc" rx="2" />
+                        <text x="40" y="58" text-anchor="middle" font-size="8" fill="#999">照片</text>
+                    </svg>
+                </div>
+                <div class="middle1-qr-text">官方微信</div>
+            </div>
+        </div>
+        <div class="middle1-footer-bottom">
+            <p>&copy;2020 贵州工程应用技术学院化学工程学院 版权所有</p>
+        </div>
+    </footer>
+
+    <script>
+        // 轮播图数据
+        const bannerData = [
+            {
+                image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1200&h=400&fit=crop&crop=center",
+                title: "学院活动"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=400&fit=crop&crop=center",
+                title: "学术会议"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=1200&h=400&fit=crop&crop=center",
+                title: "实验室"
+            }
+        ];
+
+        // 新闻数据
+        const newsData = [
+            { title: "学院召开2025年春季学期期末教职工大会", date: "2025.07.11" },
+            { title: "学院召开中国国际大学生创新大赛（2025）省赛决赛出征活动暨动员大会", date: "2025.07.10" },
+            { title: "学院召开2026年研究生招生宣讲会", date: "2025.07.03" }
+        ];
+
+        // 通用链接数据
+        const commonLinks = [
+            { name: "教务系统", url: "#" },
+            { name: "图书馆", url: "#" },
+            { name: "学工系统", url: "#" },
+            { name: "邮件系统", url: "#" }
+        ];
+
+        let currentSlide = 0;
+
+        // 轮播图功能
+        function initBanner() {
+            const bannerContainer = document.querySelector('.banner_container');
+            const dotsContainer = document.querySelector('.banner_dots');
+
+            if (!bannerContainer || !dotsContainer) return;
+
+            // 清空现有内容
+            bannerContainer.innerHTML = '';
+            dotsContainer.innerHTML = '';
+
+            // 创建轮播图片
+            bannerData.forEach((item, index) => {
+                const slide = document.createElement('div');
+                slide.className = `banner_slide ${index === 0 ? 'active' : ''}`;
+                slide.innerHTML = `<img src="${item.image}" alt="${item.title}" class="banner_img">`;
+                bannerContainer.appendChild(slide);
+
+                const dot = document.createElement('span');
+                dot.className = `dot ${index === 0 ? 'active' : ''}`;
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+
+            // 自动轮播
+            setInterval(nextSlide, 5000);
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % bannerData.length;
+            updateSlide();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlide();
+        }
+
+        function updateSlide() {
+            const slides = document.querySelectorAll('.banner_slide');
+            const dots = document.querySelectorAll('.dot');
+
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        // 导航下拉菜单
+        function initNavigation() {
+            const navItems = document.querySelectorAll('.nav_item');
+
+            navItems.forEach(item => {
+                const dropdown = item.querySelector('.dropdown');
+                if (dropdown) {
+                    let hoverTimer;
+
+                    item.addEventListener('mouseenter', () => {
+                        clearTimeout(hoverTimer);
+                        item.classList.add('on');
+                    });
+
+                    item.addEventListener('mouseleave', () => {
+                        hoverTimer = setTimeout(() => {
+                            item.classList.remove('on');
+                        }, 100);
+                    });
+                }
+            });
+        }
+
+        // 搜索功能
+        function initSearch() {
+            const searchInput = document.querySelector('.search_input');
+            const searchBtn = document.querySelector('.search_btn');
+
+            if (searchInput && searchBtn) {
+                searchBtn.addEventListener('click', performSearch);
+                searchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        performSearch();
+                    }
+                });
+            }
+        }
+
+        function performSearch() {
+            const searchInput = document.querySelector('.search_input');
+            const query = searchInput.value.trim();
+            if (query) {
+                console.log('搜索:', query);
+                alert('搜索功能开发中，搜索关键词：' + query);
+            }
+        }
+
+        // 搜索框焦点效果
+        function initSearchEffects() {
+            const searchInput = document.querySelector('.search_input');
+            if (searchInput) {
+                searchInput.addEventListener('focus', function () {
+                    this.style.borderColor = '#0c5685';
+                    this.style.boxShadow = '0 0 5px rgba(12, 86, 133, 0.3)';
+                });
+
+                searchInput.addEventListener('blur', function () {
+                    this.style.borderColor = '#ddd';
+                    this.style.boxShadow = 'none';
+                });
+            }
+        }
+
+        // 滚动效果
+        function initScrollEffects() {
+            const header = document.querySelector('.header');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                // 头部阴影效果
+                if (scrollTop > 50) {
+                    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                } else {
+                    header.style.boxShadow = 'none';
+                }
+
+                // 返回顶部按钮
+                let backToTop = document.getElementById('back-to-top');
+                if (!backToTop && scrollTop > 300) {
+                    backToTop = document.createElement('div');
+                    backToTop.id = 'back-to-top';
+                    backToTop.innerHTML = '↑';
+                    backToTop.style.cssText = `
+                        position: fixed;
+                        bottom: 30px;
+                        right: 30px;
+                        width: 50px;
+                        height: 50px;
+                        background: #1e5494;
+                        color: white;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        font-size: 20px;
+                        z-index: 1000;
+                        transition: all 0.3s;
+                        opacity: 0.8;
+                    `;
+                    backToTop.addEventListener('click', () => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    });
+                    backToTop.addEventListener('mouseenter', () => {
+                        backToTop.style.opacity = '1';
+                        backToTop.style.transform = 'scale(1.1)';
+                    });
+                    backToTop.addEventListener('mouseleave', () => {
+                        backToTop.style.opacity = '0.8';
+                        backToTop.style.transform = 'scale(1)';
+                    });
+                    document.body.appendChild(backToTop);
+                } else if (backToTop && scrollTop <= 300) {
+                    backToTop.remove();
+                }
+
+                lastScrollTop = scrollTop;
+            });
+        }
+
+        // 新闻项点击处理
+        function handleNewsClick(newsItem) {
+            console.log('新闻被点击:', newsItem);
+            // 这里可以添加跳转到新闻详情页的逻辑
+        }
+
+        // 通用链接处理
+        function handleCommonLinks() {
+            commonLinks.forEach(link => {
+                console.log(`${link.name}: ${link.url}`);
+            });
+        }
+
+        // 响应式处理
+        function handleResize() {
+            const width = window.innerWidth;
+            const navList = document.querySelector('.nav_list');
+
+            if (navList) {
+                if (width < 768) {
+                    navList.style.flexDirection = 'column';
+                    navList.style.padding = '0 10px';
+                } else {
+                    navList.style.flexDirection = 'row';
+                    navList.style.padding = '0 20px';
+                }
+            }
+        }
+
+        // 侧边栏菜单点击事件
+        function initSidebarMenu() {
+            document.querySelectorAll('.sidebar_menu a').forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // 移除所有active类
+                    document.querySelectorAll('.sidebar_menu a').forEach(function (item) {
+                        item.classList.remove('active');
+                    });
+
+                    // 添加active类到当前点击的链接
+                    this.classList.add('active');
+
+                    // 这里可以添加页面内容切换逻辑
+                    const menuText = this.textContent;
+                    console.log('点击了菜单：' + menuText);
+                });
+            });
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function () {
+            try {
+                initBanner();
+                initNavigation();
+                initSearch();
+                initSearchEffects();
+                initScrollEffects();
+                initSidebarMenu();
+                handleCommonLinks();
+                handleResize();
+
+                // 添加淡入动画
+                document.body.style.opacity = '0';
+                setTimeout(() => {
+                    document.body.style.transition = 'opacity 0.5s';
+                    document.body.style.opacity = '1';
+                }, 100);
+
+                console.log('页面初始化完成');
+            } catch (error) {
+                console.error('初始化过程中发生错误:', error);
+            }
+        });
+
+        // 窗口大小改变时重新处理响应式
+        window.addEventListener('resize', handleResize);
+
+        // 导出主要函数供外部使用
+        window.siteUtils = {
+            performSearch,
+            handleNewsClick,
+            goToSlide,
+            nextSlide
+        };
+    </script>
+</body>
+
+</html>

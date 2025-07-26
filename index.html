@@ -277,7 +277,7 @@
         /* 主导航菜单背景 */
         .main_nav_bk {
             position: relative;
-            z-index: 1000;
+            z-index: 1001;
             width: 100vw;
             display: flex;
             justify-content: center;
@@ -288,7 +288,7 @@
         .main_nav {
             position: relative;
             margin-top: 10px;
-            z-index: 3;
+            z-index: 1002;
             line-height: 56px;
             width: 70vw;
         }
@@ -469,8 +469,14 @@
         }
 
         /* 导航项当前状态 */
+        /* 导航项当前状态 */
         .nav_item.on {
-            background: #0c5685;
+            background: #0c5685 !important;
+        }
+
+        .nav_item.on .nav_link {
+            background: #0c5685 !important;
+            color: #fff !important;
         }
 
         /* 轮播图区域样式 */
@@ -504,7 +510,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%231e5799"/><stop offset="100%" stop-color="%237db9e8"/></linearGradient></defs><rect width="1200" height="400" fill="url(%23bg)"/><g opacity="0.3"><circle cx="200" cy="100" r="50" fill="%23fff"/><circle cx="400" cy="200" r="30" fill="%23fff"/><circle cx="800" cy="150" r="40" fill="%23fff"/><circle cx="1000" cy="250" r="35" fill="%23fff"/></g><text x="600" y="180" text-anchor="middle" font-size="48" fill="%23fff" font-weight="bold">材料与化学化工学院</text><text x="600" y="220" text-anchor="middle" font-size="24" fill="%23fff">College of Materials and Chemical Engineering</text></svg>') no-repeat center;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%231e5799"/><stop offset="100%" stop-color="%237db9e8"/></linearGradient></defs><rect width="1200" height="400" fill="url(%23bg)"/><g opacity="0.3"><circle cx="200" cy="100" r="50" fill="%23fff"/><circle cx="400" cy="200" r="30" fill="%23fff"/><circle cx="800" cy="150" r="40" fill="%23fff"/><circle cx="1000" cy="250" r="35" fill="%23fff"/></g><text x="600" y="180" text-anchor="middle" font-size="48" fill="%23fff" font-weight="bold">化学工程学院</text><text x="600" y="220" text-anchor="middle" font-size="24" fill="%23fff">COLLEGE OF CHEMICAL ENGINEERING</text></svg>') no-repeat center;
             background-size: cover;
         }
 
@@ -598,6 +604,862 @@
             opacity: 0.9;
         }
     </style>
+    <!-- middle1.html的样式，添加middle1-前缀避免冲突 -->
+    <style>
+        /* middle1.html的样式，添加middle1-前缀避免冲突 */
+        .middle1-main-section {
+            max-width: 1520px;
+            margin: 20px auto;
+            display: flex;
+            gap: 30px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(30, 84, 148, 0.1);
+            padding: 30px;
+            align-items: stretch;
+        }
+
+        .middle1-main-left {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(30, 84, 148, 0.08);
+            flex: 1;
+            min-width: 0;
+            padding-bottom: 24px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .middle1-main-center {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(30, 84, 148, 0.08);
+            padding-bottom: 24px;
+            flex: 1.6;
+            min-width: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .middle1-main-right {
+            min-width: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            flex-shrink: 0;
+            align-items: stretch;
+        }
+
+        .middle1-section-title {
+            background: #0b4a8b;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 14px 20px 14px 20px;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            align-items: center;
+            margin-bottom: 2px;
+            justify-content: space-between;
+            border-bottom: none;
+            box-shadow: none;
+            position: relative;
+        }
+
+        .middle1-section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #ff9500;
+            border-radius: 2px 0 0 2px;
+        }
+
+        .middle1-section-title .middle1-more-link {
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none !important;
+            font-weight: normal;
+            margin-left: 10px;
+            border-bottom: none !important;
+        }
+
+        .middle1-section-title a {
+            text-decoration: none !important;
+            border-bottom: none !important;
+            color: #fff;
+        }
+
+        .middle1-notice-list,
+        .middle1-news-list {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .middle1-notice-list td,
+        .middle1-news-list td {
+            padding: 8px 20px;
+            font-size: 15px;
+            vertical-align: middle;
+            height: 32px;
+            box-sizing: border-box;
+        }
+
+        .middle1-notice-date,
+        .middle1-news-date {
+            color: #2176ae;
+            width: 110px;
+            font-weight: 500;
+            white-space: nowrap;
+            font-size: 15px;
+            vertical-align: middle;
+        }
+
+        .middle1-notice-title,
+        .middle1-notice-title.normal,
+        .middle1-news-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 240px;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 15px;
+            height: 32px;
+        }
+
+        .middle1-news-title {
+            max-width: 300px;
+        }
+
+        .middle1-news-icon {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            margin-right: 6px;
+            background: url('data:image/svg+xml;utf8,<svg fill="%232176ae" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 17v-2h2v-6H3V7h2V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2h2v2h-2v6h2v2h-2v2a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-2H3zm4 2h10v-2H7v2zm0-4h10v-6H7v6zm0-8v2h10V7H7z"/></svg>') no-repeat center center;
+            background-size: contain;
+            vertical-align: middle;
+        }
+
+        .middle1-carousel-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.65);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 16px;
+            box-sizing: border-box;
+            border-radius: 0 0 8px 8px;
+            z-index: 2;
+        }
+
+        #middle1-carousel-caption {
+            font-size: 15px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-right: 15px;
+        }
+
+        .middle1-carousel-dots {
+            display: flex;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        .middle1-carousel-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 2px;
+            background: #fff;
+            opacity: 0.8;
+            cursor: pointer;
+            transition: background 0.2s, opacity 0.2s;
+        }
+
+        .middle1-carousel-dot.active {
+            background: #f9b233;
+            opacity: 1;
+        }
+
+        .middle1-featured-news-container {
+            display: flex;
+            gap: 12px;
+            align-items: stretch;
+            padding: 4px 0;
+        }
+
+        .middle1-featured-news-image {
+            flex: 0 0 42%;
+            min-width: 0;
+        }
+
+        .middle1-featured-news-text {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2px 0;
+        }
+
+        .middle1-featured-news-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #c00;
+            line-height: 1.3;
+            margin-bottom: 4px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .middle1-featured-news-summary {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.4;
+            margin-bottom: 4px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .middle1-featured-news-date {
+            font-size: 13px;
+            color: #2176ae;
+            font-weight: 500;
+            margin-top: auto;
+        }
+
+        .middle1-side-img {
+            width: 100%;
+            height: 95px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(30, 84, 148, 0.13);
+            background: #eee;
+            margin-bottom: 16px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .middle1-side-img:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(30, 84, 148, 0.2);
+        }
+
+        .middle1-main-bottom {
+            max-width: 1520px;
+            margin: 30px auto 0 auto;
+            display: flex;
+            gap: 30px;
+            padding: 0 30px;
+            align-items: stretch;
+        }
+
+        .middle1-bottom-col {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(30, 84, 148, 0.08);
+            flex: 1;
+            min-width: 0;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .middle1-bottom-title {
+            background: #0b4a8b;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px 18px 12px 22px;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            align-items: center;
+            margin-bottom: 2px;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .middle1-bottom-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #ff9500;
+            border-radius: 2px 0 0 2px;
+        }
+
+        .middle1-bottom-title .middle1-more-link {
+            color: #fff;
+            font-size: 13px;
+            text-decoration: underline;
+            font-weight: normal;
+            margin-left: 10px;
+        }
+
+        .middle1-bottom-list {
+            width: 100%;
+            border-collapse: collapse;
+            flex: 1;
+        }
+
+        .middle1-bottom-list tr {
+            border-bottom: 1px solid #e5e5e5;
+            transition: background-color 0.3s ease;
+        }
+
+        .middle1-bottom-list tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .middle1-bottom-list td {
+            padding: 16px 20px;
+            font-size: 15px;
+            vertical-align: middle;
+            min-height: 60px;
+        }
+
+        .middle1-bottom-date {
+            color: #2176ae;
+            width: 100px;
+            font-weight: 500;
+            white-space: nowrap;
+            text-align: center;
+            background: #f5f5f5;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-right: 16px;
+        }
+
+        .middle1-bottom-list td:first-child {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 280px;
+            display: inline-block;
+            vertical-align: middle;
+            color: #333;
+            font-weight: 400;
+        }
+
+        .middle1-bottom-list td:first-child:hover {
+            color: #0b4a8b;
+        }
+
+        .middle1-footer {
+            background: #1e5494;
+            color: #ffffff;
+            padding: 0;
+            margin-top: 40px;
+            font-size: 14px;
+            text-align: center;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .middle1-footer-nav {
+            background: rgba(30, 84, 148, 0.8);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .middle1-footer-nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .middle1-footer-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+
+        .middle1-footer-nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .middle1-footer .middle1-footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .middle1-footer .middle1-footer-info {
+            text-align: left;
+            flex: 1;
+            min-width: 320px;
+            line-height: 1.5;
+        }
+
+        .middle1-footer .middle1-footer-info div {
+            margin: 4px 0;
+            font-size: 14px;
+        }
+
+        .middle1-footer .middle1-footer-qr {
+            min-width: 120px;
+            text-align: center;
+            margin-left: 20px;
+        }
+
+        .middle1-footer .middle1-footer-qr img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 8px;
+            background: #fff;
+            border-radius: 8px;
+        }
+
+        .middle1-footer .middle1-footer-qr div {
+            font-size: 13px;
+            color: #ffffff;
+        }
+
+        .middle1-footer .middle1-footer-link {
+            margin: 6px 0 0 0;
+            color: #ffffff;
+            font-size: 13px;
+        }
+
+        .middle1-award-img {
+            width: 300px;
+            height: 280px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .middle1-award-img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .middle1-carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(30, 84, 148, 0.13);
+            margin-bottom: 4px;
+        }
+
+        .middle1-carousel-slide {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .middle1-carousel-slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        /* 可点击元素样式 */
+        .middle1-notice-title,
+        .middle1-news-title,
+        .middle1-bottom-list td:first-child,
+        .middle1-side-img,
+        .middle1-carousel-slide,
+        .middle1-featured-news-container {
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .middle1-notice-title:hover,
+        .middle1-news-title:hover,
+        .middle1-bottom-list td:first-child:hover {
+            opacity: 0.8;
+        }
+
+        .middle1-side-img:hover,
+        .middle1-carousel-slide:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+            transition: all 0.2s ease;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 1600px) {
+
+            .middle1-main-section,
+            .middle1-main-bottom,
+            .middle1-footer .middle1-footer-inner {
+                max-width: 98vw;
+                padding: 25px;
+                gap: 25px;
+            }
+
+            .middle1-notice-title,
+            .middle1-notice-title.normal {
+                max-width: 200px;
+            }
+
+            .middle1-news-title {
+                max-width: 250px;
+            }
+
+            .middle1-bottom-list td:first-child {
+                max-width: 240px;
+            }
+        }
+
+        /* PC端水平滚动 - 当页面宽度小于1032px时 */
+        @media (max-width: 1032px) {
+            .middle1-bottom-section {
+                max-width: none;
+                margin: 40px 0;
+                display: block;
+                overflow-x: auto;
+                padding: 0 30px;
+                white-space: nowrap;
+                /* 启用水平滚动 */
+            }
+
+            .middle1-bottom-section::-webkit-scrollbar {
+                height: 8px;
+            }
+
+            .middle1-bottom-section::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 4px;
+            }
+
+            .middle1-bottom-section::-webkit-scrollbar-thumb {
+                background: #c1c1c1;
+                border-radius: 4px;
+            }
+
+            .middle1-bottom-section::-webkit-scrollbar-thumb:hover {
+                background: #a8a8a8;
+            }
+
+            .middle1-bottom-column {
+                display: inline-block;
+                width: 400px;
+                min-width: 400px;
+                margin-right: 30px;
+                vertical-align: top;
+                white-space: normal;
+                /* 恢复栏目内部的正常换行 */
+            }
+
+            .middle1-bottom-column:last-child {
+                margin-right: 0;
+            }
+
+            /* 保持原有的标题和内容样式 */
+            .middle1-bottom-item-title {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .middle1-bottom-item-date {
+                width: 80px;
+                min-width: 80px;
+                flex-shrink: 0;
+            }
+        }
+
+        @media (max-width: 900px) {
+
+            .middle1-main-section {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .middle1-main-left,
+            .middle1-main-center,
+            .middle1-main-right {
+                min-width: auto;
+                width: 100%;
+            }
+
+            .middle1-main-bottom {
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 20px;
+            }
+
+            .middle1-notice-title,
+            .middle1-notice-title.normal,
+            .middle1-news-title {
+                max-width: none;
+                width: auto;
+            }
+
+            .middle1-bottom-list td:first-child {
+                max-width: none;
+            }
+
+            .middle1-side-img {
+                height: 120px;
+            }
+
+            .middle1-featured-news-container {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .middle1-featured-news-image {
+                flex: none;
+                width: 100%;
+            }
+
+            .middle1-footer .middle1-footer-inner {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .middle1-footer .middle1-footer-info {
+                text-align: center;
+                min-width: auto;
+            }
+
+            /* 移动端优化 - 更小屏幕 */
+            @media (max-width: 600px) {
+
+                .middle1-main-section {
+                    margin: 10px;
+                    padding: 15px;
+                    gap: 15px;
+                    border-radius: 8px;
+                }
+
+                .middle1-main-left,
+                .middle1-main-center,
+                .middle1-main-right {
+                    border-radius: 6px;
+                    box-shadow: 0 1px 6px rgba(30, 84, 148, 0.06);
+                }
+
+                .middle1-section-title,
+                .middle1-bottom-title {
+                    font-size: 16px;
+                    padding: 10px 16px 10px 18px;
+                    border-radius: 6px 6px 0 0;
+                }
+
+                .middle1-section-title::before,
+                .middle1-bottom-title::before {
+                    width: 3px;
+                }
+
+                .middle1-more-link {
+                    font-size: 12px;
+                }
+
+                .middle1-notice-list li,
+                .middle1-bottom-list td {
+                    padding: 12px 16px;
+                    font-size: 14px;
+                }
+
+                .middle1-notice-date,
+                .middle1-bottom-date {
+                    font-size: 12px;
+                    min-width: 60px;
+                    padding: 4px 8px;
+                }
+
+                .middle1-notice-title,
+                .middle1-news-title {
+                    font-size: 14px;
+                    line-height: 1.4;
+                }
+
+                .middle1-main-bottom {
+                    margin: 20px 10px 0;
+                    padding: 0 15px;
+                    gap: 15px;
+                }
+
+                .middle1-bottom-col {
+                    border-radius: 6px;
+                    margin-bottom: 20px;
+                }
+
+                .middle1-side-img {
+                    height: 100px;
+                    margin-bottom: 12px;
+                    border-radius: 6px;
+                }
+
+                .middle1-featured-news-container {
+                    padding: 12px 16px;
+                    gap: 10px;
+                }
+
+                .middle1-featured-news-title {
+                    font-size: 14px;
+                    line-height: 1.3;
+                }
+
+                .middle1-featured-news-summary {
+                    font-size: 12px;
+                    line-height: 1.3;
+                    -webkit-line-clamp: 2;
+                }
+
+                .middle1-featured-news-date {
+                    font-size: 12px;
+                }
+
+                .middle1-carousel-container {
+                    height: 80px;
+                    border-radius: 6px;
+                }
+
+                .middle1-carousel-slide {
+                    height: 80px;
+                }
+
+                .middle1-carousel-overlay {
+                    padding: 6px 12px;
+                    border-radius: 0 0 6px 6px;
+                }
+
+                #middle1-carousel-caption {
+                    font-size: 13px;
+                }
+
+                .middle1-carousel-dot {
+                    width: 7px;
+                    height: 7px;
+                }
+
+                .middle1-footer {
+                    margin-top: 20px;
+                }
+
+                .middle1-footer .middle1-footer-inner {
+                    padding: 15px;
+                    gap: 15px;
+                }
+
+                .middle1-footer .middle1-footer-info div {
+                    font-size: 12px;
+                    margin: 2px 0;
+                }
+
+                .middle1-footer .middle1-footer-qr img {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                .middle1-footer .middle1-footer-qr div {
+                    font-size: 11px;
+                }
+            }
+
+            /* 超小屏幕优化 */
+            @media (max-width: 400px) {
+
+                .middle1-main-section {
+                    margin: 5px;
+                    padding: 10px;
+                    gap: 10px;
+                }
+
+                .middle1-section-title,
+                .middle1-bottom-title {
+                    font-size: 15px;
+                    padding: 8px 12px 8px 16px;
+                }
+
+                .middle1-notice-list li,
+                .middle1-bottom-list td {
+                    padding: 10px 12px;
+                    font-size: 13px;
+                }
+
+                .middle1-notice-date,
+                .middle1-bottom-date {
+                    font-size: 11px;
+                    min-width: 50px;
+                    padding: 3px 6px;
+                }
+
+                .middle1-main-bottom {
+                    margin: 15px 5px 0;
+                    padding: 0 10px;
+                    gap: 10px;
+                }
+
+                .middle1-featured-news-container {
+                    padding: 10px 12px;
+                    gap: 8px;
+                }
+
+                .middle1-featured-news-title {
+                    font-size: 13px;
+                }
+
+                .middle1-featured-news-summary {
+                    font-size: 11px;
+                    -webkit-line-clamp: 1;
+                }
+
+                .middle1-carousel-container {
+                    height: 70px;
+                }
+
+                .middle1-carousel-slide {
+                    height: 70px;
+                }
+
+                .middle1-carousel-overlay {
+                    padding: 4px 8px;
+                }
+
+                #middle1-carousel-caption {
+                    font-size: 12px;
+                }
+
+                .middle1-side-img {
+                    height: 80px;
+                    margin-bottom: 8px;
+                }
+            }
+    </style>
 </head>
 
 <body>
@@ -640,20 +1502,21 @@
             <div class="main_nav_bk">
                 <nav class="main_nav">
                     <ul class="nav_list clearfix">
-                        <li class="nav_item on"><a href="#" class="nav_link">学院首页</a></li>
+                        <li class="nav_item on"><a href="index.html" class="nav_link">学院首页</a></li>
 
                         <li class="nav_item nav_dropdown">
-                            <a href="#" class="nav_link">学院概况</a>
+                            <a href="college-introduction.html" class="nav_link">学院概况</a>
                             <div class="dropdown">
                                 <ul>
                                     <li>
-                                        <div class="text"><a href="#" class="dropdown_link">学院简介</a></div>
+                                        <div class="text"><a href="college-introduction.html" class="dropdown_link">学院简介</a></div>
                                     </li>
                                     <li>
-                                        <div class="text"><a href="#" class="dropdown_link">学院领导</a></div>
+                                        <div class="text"><a href="college-leadership.html"
+                                                class="dropdown_link">学院领导</a></div>
                                     </li>
                                     <li>
-                                        <div class="text"><a href="#" class="dropdown_link">机构设置</a></div>
+                                        <div class="text"><a href="college-organization.html" class="dropdown_link">机构设置</a></div>
                                     </li>
                                     <li>
                                         <div class="text"><a href="#" class="dropdown_link">院务公开</a></div>
@@ -663,11 +1526,11 @@
                         </li>
 
                         <li class="nav_item nav_dropdown">
-                            <a href="#" class="nav_link">学科专业</a>
+                            <a href="xkzy.html" class="nav_link">学科专业</a>
                             <div class="dropdown">
                                 <ul>
                                     <li>
-                                        <div class="text"><a href="#" class="dropdown_link">本科专业</a></div>
+                                        <div class="text"><a href="xkzy.html" class="dropdown_link">本科专业</a></div>
                                     </li>
                                     <li>
                                         <div class="text"><a href="#" class="dropdown_link">博士点</a></div>
@@ -680,11 +1543,11 @@
                         </li>
 
                         <li class="nav_item nav_dropdown">
-                            <a href="#" class="nav_link">师资队伍</a>
+                            <a href="szdw.html" class="nav_link">师资队伍</a>
                             <div class="dropdown">
                                 <ul>
                                     <li>
-                                        <div class="text"><a href="#" class="dropdown_link">师资概况</a></div>
+                                        <div class="text"><a href="szdw.html" class="dropdown_link">师资概况</a></div>
                                     </li>
                                     <li>
                                         <div class="text"><a href="#" class="dropdown_link">教师名录</a></div>
@@ -696,10 +1559,10 @@
                             </div>
                         </li>
 
-                        <li class="nav_item"><a href="#" class="nav_link">平台建设</a></li>
+                        <li class="nav_item"><a href="ptjs.html" class="nav_link">平台建设</a></li>
 
                         <li class="nav_item nav_dropdown">
-                            <a href="#" class="nav_link">科学研究</a>
+                            <a href="kxyj.html" class="nav_link">科学研究</a>
                             <div class="dropdown">
                                 <ul>
                                     <li>
@@ -722,7 +1585,7 @@
                         </li>
 
                         <li class="nav_item nav_dropdown">
-                            <a href="#" class="nav_link">党建工作</a>
+              <a href="djgz.html" class="nav_link">党建工作</a>
                             <div class="dropdown">
                                 <ul>
                                     <li>
@@ -739,7 +1602,7 @@
                         </li>
 
                         <li class="nav_item nav_dropdown">
-                            <a href="#" class="nav_link">教学工作</a>
+              <a href="jxgz.html" class="nav_link">教学工作</a>
                             <div class="dropdown">
                                 <ul>
                                     <li>
@@ -759,7 +1622,7 @@
                         </li>
 
                         <li class="nav_item nav_dropdown">
-                            <a href="#" class="nav_link">学生工作</a>
+              <a href="xsgz.html" class="nav_link">学生工作</a>
                             <div class="dropdown">
                                 <ul>
                                     <li>
@@ -772,14 +1635,14 @@
                                         <div class="text"><a href="#" class="dropdown_link">团学工作</a></div>
                                     </li>
                                     <li>
-                                        <div class="text"><a href="#" class="dropdown_link">学生服务</a></div>
+                                        <div class="text"><a href="college-leadership.html" class="dropdown_link">学院领导</a></div>
                                     </li>
                                 </ul>
                             </div>
                         </li>
 
                         <li class="nav_item nav_dropdown">
-                            <a href="#" class="nav_link">招生就业</a>
+              <a href="zsjy.html" class="nav_link">招生就业</a>
                             <div class="dropdown">
                                 <ul>
                                     <li>
@@ -793,7 +1656,7 @@
                         </li>
 
                         <li class="nav_item nav_dropdown">
-                            <a href="#" class="nav_link">创新创业</a>
+              <a href="cxcy.html" class="nav_link">创新创业</a>
                             <div class="dropdown">
                                 <ul>
                                     <li>
@@ -807,7 +1670,7 @@
                         </li>
 
                         <li class="nav_item nav_dropdown">
-                            <a href="#" class="nav_link">发展联络</a>
+              <a href="fzll.html" class="nav_link">发展联络</a>
                             <div class="dropdown">
                                 <ul>
                                     <li>
@@ -844,487 +1707,1122 @@
         </div>
     </header>
 
+    <!-- middle1.html的内容开始 -->
+    <!-- ====== 三栏主内容区（通知公告、学院快讯、右侧图片） ====== -->
+    <div class="middle1-main-section">
+        <!-- ====== 通知公告 ====== -->
+        <div class="middle1-main-left">
+            <div class="middle1-section-title">通知公告 <a href="#" class="middle1-more-link">+更多</a></div>
+            <table class="middle1-notice-list">
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-notice-date">2025.06.23</td>
+                    <td class="middle1-notice-title">材料与化学化工学院2025年师资招聘启事</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-notice-date">2025.07.02</td>
+                    <td class="middle1-notice-title normal" title="关于锂资源与锂电产业学院2025年&quot;锂电创新人才培养计划&quot;通知">
+                        关于锂资源与锂电产业学院2025年"锂电创新人才培养计划"通知</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-notice-date">2025.06.03</td>
+                    <td class="middle1-notice-title normal" title="材料与化学化工学院（锂资源与锂电产业学院）2025年硕士研究生招生简章">
+                        材料与化学化工学院（锂资源与锂电产业学院）2025年硕士研究生招生简章</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-notice-date">2025.04.21</td>
+                    <td class="middle1-notice-title normal" title="成都理工大学材料与化学化工学院（锂电池材料研究中心）开放课题申请指南">
+                        成都理工大学材料与化学化工学院（锂电池材料研究中心）开放课题申请指南</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-notice-date">2025.04.18</td>
+                    <td class="middle1-notice-title normal" title="成都理工大学材料与化学化工学院（锂电技术实验室）暑期开放安排">
+                        成都理工大学材料与化学化工学院（锂电技术实验室）暑期开放安排</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-notice-date">2025.04.09</td>
+                    <td class="middle1-notice-title normal" title="材料与化学化工学院（锂资源与锂电产业学院）学术讲座通知">
+                        材料与化学化工学院（锂资源与锂电产业学院）学术讲座通知</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-notice-date">2025.04.07</td>
+                    <td class="middle1-notice-title normal" title="关于举行成都理工大学第十一届&quot;恒宇杯&quot;金相技能大赛的通知">
+                        关于举行成都理工大学第十一届"恒宇杯"金相技能大赛的通知</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-notice-date">2025.04.02</td>
+                    <td class="middle1-notice-title normal" title="成都理工大学材料与化学化工学院（锂电材料研究所）项目申报指南">
+                        成都理工大学材料与化学化工学院（锂电材料研究所）项目申报指南</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-notice-date">2025.03.30</td>
+                    <td class="middle1-notice-title normal" title="材料与化学化工学院（锂资源与锂电产业学院）实验室安全培训安排">
+                        材料与化学化工学院（锂资源与锂电产业学院）实验室安全培训安排</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-notice-date">2025.03.25</td>
+                    <td class="middle1-notice-title normal" title="成都理工大学材料与化学化工学院（锂电池技术研究中心）科研项目招标公告">
+                        成都理工大学材料与化学化工学院（锂电池技术研究中心）科研项目招标公告</td>
+                </tr>
+            </table>
+        </div>
+        <!-- ====== 学院快讯 ====== -->
+        <div class="middle1-main-center">
+            <div class="middle1-section-title">学院快讯 <a href="#" class="middle1-more-link">+更多</a></div>
+            <table class="middle1-news-list">
+                <tr onclick="window.location.href='#'">
+                    <td colspan="2" style="padding-bottom: 12px; border-bottom: 1px solid #eee;">
+                        <div class="middle1-featured-news-container" onclick="window.location.href='#'">
+                            <div class="middle1-featured-news-image">
+                                <div class="middle1-carousel-container">
+                                    <img class="middle1-carousel-slide active"
+                                        src="https://picsum.photos/420/120?random=2" alt="快讯1"
+                                        onclick="window.location.href='#'">
+                                    <img class="middle1-carousel-slide" src="https://picsum.photos/420/120?random=3"
+                                        alt="快讯2" onclick="window.location.href='#'">
+                                    <img class="middle1-carousel-slide" src="https://picsum.photos/420/120?random=4"
+                                        alt="快讯3" onclick="window.location.href='#'">
+                                    <div class="middle1-carousel-overlay">
+                                        <span id="middle1-carousel-caption">改革开放再出发 立足岗位做贡献</span>
+                                        <div class="middle1-carousel-dots">
+                                            <span class="middle1-carousel-dot active"></span>
+                                            <span class="middle1-carousel-dot"></span>
+                                            <span class="middle1-carousel-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="middle1-featured-news-text">
+                                <div class="middle1-featured-news-title">《盐湖化工》课程入选教育部在线教育研究中心2024"拓金计划"</div>
+                                <div class="middle1-featured-news-summary">
+                                    近日，教育部在线教育研究中心正式公布了2024"拓金计划"第二批示范课程入选名单，全国高校共有69门课程入选，其中我院于旭东老师主讲的《盐湖化工》课程成功入选。
+                                </div>
+                                <div class="middle1-featured-news-date">2024.11.15</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-news-title" title="学院召开2025年春季学期期末教职工大会"><span
+                            class="middle1-news-icon"></span>学院召开2025年春季学期期末教职工大会</td>
+                    <td class="middle1-news-date">2025.07.11</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-news-title" title="学院召开中国国际大学生创新大赛（2025）省赛决赛出征活动暨动员大会"><span
+                            class="middle1-news-icon"></span>学院召开中国国际大学生创新大赛（2025）省赛决赛出征活动暨动员大会</td>
+                    <td class="middle1-news-date">2025.07.10</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-news-title" title="学院召开2026年研究生招生宣讲会"><span
+                            class="middle1-news-icon"></span>学院召开2026年研究生招生宣讲会
+                    </td>
+                    <td class="middle1-news-date">2025.07.03</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-news-title" title="深粉化学世界 启迪科学梦想——学院暨佳副教授走进大弯中学开展科普讲座"><span
+                            class="middle1-news-icon"></span>深粉化学世界 启迪科学梦想——学院暨佳副教授走进大弯中学开展科普讲座</td>
+                    <td class="middle1-news-date">2025.06.30</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-news-title" title="学校党委书记刘清友一行赴黑水县走访慰问我院驻村干部"><span
+                            class="middle1-news-icon"></span>学校党委书记刘清友一行赴黑水县走访慰问我院驻村干部</td>
+                    <td class="middle1-news-date">2025.06.24</td>
+                </tr>
+            </table>
+        </div>
+        <!-- ====== 右侧五张图片 ====== -->
+        <div class="middle1-main-right">
+            <img class="middle1-side-img" src="https://picsum.photos/220/95?random=11" alt="side1"
+                onclick="window.location.href='#'">
+            <img class="middle1-side-img" src="https://picsum.photos/220/95?random=12" alt="side2"
+                onclick="window.location.href='#'">
+            <img class="middle1-side-img" src="https://picsum.photos/220/95?random=13" alt="side3"
+                onclick="window.location.href='#'">
+            <img class="middle1-side-img" src="https://picsum.photos/220/95?random=14" alt="side4"
+                onclick="window.location.href='#'">
+            <img class="middle1-side-img" src="https://picsum.photos/220/95?random=15" alt="side5"
+                onclick="window.location.href='#'">
+        </div>
+    </div>
+    <!-- ====== 下方横幅图片 ====== -->
+    <div style="max-width:1400px;margin:36px auto 0 auto;padding:0 20px;">
+        <div class="awards-container"
+            style="display:flex;justify-content:space-between;align-items:center;background:linear-gradient(90deg, #1e5494 0%, #2d6bb0 50%, #1e5494 100%);padding:20px 40px;border-radius:12px;box-shadow:0 4px 16px rgba(30,84,148,0.15);">
+            <!-- 左侧学院风采文字 -->
+            <div class="academy-text"
+                style="color:white;font-family:Microsoft YaHei,sans-serif;font-weight:bold;margin-right:30px;">
+                <div style="font-size:26px;line-height:32px;writing-mode:vertical-rl;text-orientation:upright;">学院风采
+                </div>
+                <div style="color:#ffd700;font-size:13px;margin-top:12px;cursor:pointer;"
+                    onclick="window.location.href='#'">+MORE</div>
+            </div>
+            <!-- 三个奖项图片 -->
+            <div class="awards-images" style="display:flex;gap:30px;flex:1;justify-content:center;">
+                <svg width="180" height="110" viewBox="0 0 180 110" style="cursor:pointer;"
+                    onclick="window.location.href='#'">
+                    <rect width="180" height="110" fill="#ffd700" rx="12" />
+                    <text x="90" y="32" text-anchor="middle" fill="#1e5494" font-size="18"
+                        font-weight="bold">优秀教学成果奖</text>
+                    <text x="90" y="58" text-anchor="middle" fill="#1e5494" font-size="16">2024年度</text>
+                    <circle cx="90" cy="82" r="12" fill="#1e5494" />
+                    <text x="90" y="89" text-anchor="middle" fill="white" font-size="14">★</text>
+                </svg>
+                <svg width="180" height="110" viewBox="0 0 180 110" style="cursor:pointer;"
+                    onclick="window.location.href='#'">
+                    <rect width="180" height="110" fill="#c0c0c0" rx="12" />
+                    <text x="90" y="32" text-anchor="middle" fill="#1e5494" font-size="18"
+                        font-weight="bold">科研创新奖</text>
+                    <text x="90" y="58" text-anchor="middle" fill="#1e5494" font-size="16">2024年度</text>
+                    <circle cx="90" cy="82" r="12" fill="#1e5494" />
+                    <text x="90" y="89" text-anchor="middle" fill="white" font-size="14">★</text>
+                </svg>
+                <svg width="180" height="110" viewBox="0 0 180 110" style="cursor:pointer;"
+                    onclick="window.location.href='#'">
+                    <rect width="180" height="110" fill="#cd7f32" rx="12" />
+                    <text x="90" y="32" text-anchor="middle" fill="#1e5494" font-size="18"
+                        font-weight="bold">学科建设奖</text>
+                    <text x="90" y="58" text-anchor="middle" fill="#1e5494" font-size="16">2024年度</text>
+                    <circle cx="90" cy="82" r="12" fill="#1e5494" />
+                    <text x="90" y="89" text-anchor="middle" fill="white" font-size="14">★</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== 底部三栏内容（学术动态、党建工作、人才培养） ====== -->
+    <div class="middle1-bottom-section">
+        <!-- 学术动态 -->
+        <div class="middle1-bottom-column">
+            <div class="middle1-bottom-title">学术动态</div>
+            <table class="middle1-bottom-list">
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院举办第十二届" 材料前沿"学术论坛暨新材料技术发展研讨会">
+                        学院举办第十二届"材料前沿"学术论坛暨新材料技术发展研讨会</td>
+                    <td class="middle1-bottom-item-date">07-15</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="锂电池材料研究中心在《Nature Energy》发表重要研究成果获国际同行高度关注">
+                        锂电池材料研究中心在《Nature Energy》发表重要研究成果获国际同行高度关注</td>
+                    <td class="middle1-bottom-item-date">07-12</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院承办第五届全国锂资源开发与利用学术会议暨产业发展高峰论坛">
+                        学院承办第五届全国锂资源开发与利用学术会议暨产业发展高峰论坛</td>
+                    <td class="middle1-bottom-item-date">07-08</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="化工系在《Chemical Engineering Journal》发表高水平论文推动绿色化工技术创新发展">
+                        化工系在《Chemical Engineering Journal》发表高水平论文推动绿色化工技术创新发展</td>
+                    <td class="middle1-bottom-item-date">07-05</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院获批国家自然科学基金重点项目1项资助金额创历史新高">
+                        学院获批国家自然科学基金重点项目1项资助金额创历史新高</td>
+                    <td class="middle1-bottom-item-date">07-01</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="材料科学与工程系举办青年学者学术沙龙促进跨学科交流合作">
+                        材料科学与工程系举办青年学者学术沙龙促进跨学科交流合作</td>
+                    <td class="middle1-bottom-item-date">06-28</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院邀请中科院院士作学术报告分享前沿科技发展趋势">学院邀请中科院院士作学术报告分享前沿科技发展趋势</td>
+                    <td class="middle1-bottom-item-date">06-25</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="锂电产业学院与企业联合申报省级重点实验室推进产学研深度融合">
+                        锂电产业学院与企业联合申报省级重点实验室推进产学研深度融合</td>
+                    <td class="middle1-bottom-item-date">06-22</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 党建工作 -->
+        <div class="middle1-bottom-column">
+            <div class="middle1-bottom-title">党建工作</div>
+            <table class="middle1-bottom-list">
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院党委组织开展" 学习贯彻党的二十大精神"主题党日活动深入推进理论学习">
+                        学院党委组织开展"学习贯彻党的二十大精神"主题党日活动深入推进理论学习</td>
+                    <td class="middle1-bottom-item-date">07-16</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院举办党员发展对象培训班提升党员队伍整体素质">学院举办党员发展对象培训班提升党员队伍整体素质</td>
+                    <td class="middle1-bottom-item-date">07-13</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院党委书记为新党员上党课强化党性教育和理想信念">学院党委书记为新党员上党课强化党性教育和理想信念</td>
+                    <td class="middle1-bottom-item-date">07-10</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院开展" 重走长征路"红色教育实践活动传承革命精神">学院开展"重走长征路"红色教育实践活动传承革命精神
+                    </td>
+                    <td class="middle1-bottom-item-date">07-06</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院党委召开党风廉政建设专题会议筑牢廉洁从教防线">学院党委召开党风廉政建设专题会议筑牢廉洁从教防线</td>
+                    <td class="middle1-bottom-item-date">07-03</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院组织党员志愿者开展社区服务活动践行为民服务宗旨">学院组织党员志愿者开展社区服务活动践行为民服务宗旨
+                    </td>
+                    <td class="middle1-bottom-item-date">06-30</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院党委理论学习中心组专题学习习近平总书记重要讲话精神推动思想政治建设">
+                        学院党委理论学习中心组专题学习习近平总书记重要讲话精神推动思想政治建设</td>
+                    <td class="middle1-bottom-item-date">06-27</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院举办" 党员先锋岗"表彰大会激励党员发挥模范带头作用">
+                        学院举办"党员先锋岗"表彰大会激励党员发挥模范带头作用</td>
+                    <td class="middle1-bottom-item-date">06-24</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 人才培养 -->
+        <div class="middle1-bottom-column">
+            <div class="middle1-bottom-title">人才培养</div>
+            <table class="middle1-bottom-list">
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院2025届毕业生就业率达98.5%创历史新高获得社会各界广泛赞誉">
+                        学院2025届毕业生就业率达98.5%创历史新高获得社会各界广泛赞誉</td>
+                    <td class="middle1-bottom-item-date">07-17</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院学生在全国大学生化工设计竞赛中获特等奖展现专业实力和创新能力">
+                        学院学生在全国大学生化工设计竞赛中获特等奖展现专业实力和创新能力</td>
+                    <td class="middle1-bottom-item-date">07-14</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院举办2025年研究生学术论坛促进学术交流与创新思维培养">
+                        学院举办2025年研究生学术论坛促进学术交流与创新思维培养</td>
+                    <td class="middle1-bottom-item-date">07-11</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院开展本科生导师制实施情况调研完善人才培养体系建设">学院开展本科生导师制实施情况调研完善人才培养体系建设
+                    </td>
+                    <td class="middle1-bottom-item-date">07-07</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院与知名企业共建实习实训基地深化产教融合协同育人">学院与知名企业共建实习实训基地深化产教融合协同育人
+                    </td>
+                    <td class="middle1-bottom-item-date">07-04</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院举办" 青春榜样"优秀学生事迹报告会激励学生成长成才">
+                        学院举办"青春榜样"优秀学生事迹报告会激励学生成长成才</td>
+                    <td class="middle1-bottom-item-date">07-01</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院启动2025年大学生创新创业训练计划项目培养学生创新创业能力">
+                        学院启动2025年大学生创新创业训练计划项目培养学生创新创业能力</td>
+                    <td class="middle1-bottom-item-date">06-29</td>
+                </tr>
+                <tr onclick="window.location.href='#'">
+                    <td class="middle1-bottom-item-title" title="学院组织开展专业认知实习活动增强学生专业认同感和实践能力">
+                        学院组织开展专业认知实习活动增强学生专业认同感和实践能力</td>
+                    <td class="middle1-bottom-item-date">06-26</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ====== 页脚 ====== -->
+    <footer class="middle1-footer">
+        <div class="middle1-footer-content">
+            <!-- 左侧导航链接 -->
+            <div class="middle1-footer-nav">
+                <div class="middle1-footer-nav-column">
+                    <a href="college-introduction.html" class="middle1-footer-link">学院概况</a>
+                    <a href="szdw.html" class="middle1-footer-link">师资队伍</a>
+                    <a href="#" class="middle1-footer-link">学科建设</a>
+                </div>
+                <div class="middle1-footer-nav-column">
+                    <a href="#" class="middle1-footer-link">本科教育</a>
+                    <a href="#" class="middle1-footer-link">研究生教育</a>
+                    <a href="#" class="middle1-footer-link">科学研究</a>
+                </div>
+                <div class="middle1-footer-nav-column">
+                    <a href="xsgz.html" class="middle1-footer-link">学生工作</a>
+                    <a href="djgz.html" class="middle1-footer-link">党建工作</a>
+                    <a href="#" class="middle1-footer-link">校友工作</a>
+                </div>
+                <div class="middle1-footer-nav-column">
+                    <a href="#" class="middle1-footer-link">合作交流</a>
+                    <a href="zsjy.html" class="middle1-footer-link">招生就业</a>
+                    <a href="#" class="middle1-footer-link">联系我们</a>
+                </div>
+            </div>
+
+            <!-- 中间联系信息 -->
+            <div class="middle1-footer-contact">
+                <div class="middle1-contact-item">
+                    <strong>地址：</strong>四川省成都市成华区二仙桥东三路1号
+                </div>
+                <div class="middle1-contact-item">
+                    <strong>邮编：</strong>610059
+                </div>
+                <div class="middle1-contact-item">
+                    <strong>电话：</strong>028-84078945
+                </div>
+                <div class="middle1-contact-item">
+                    <strong>传真：</strong>028-84078945
+                </div>
+                <div class="middle1-contact-item">
+                    <strong>邮箱：</strong>clhgxy@cdut.edu.cn
+                </div>
+            </div>
+
+            <!-- 右侧微信公众号 -->
+            <div class="middle1-footer-qr">
+                <div class="middle1-qr-code">
+                    <svg width="80" height="80" viewBox="0 0 80 80">
+                        <!-- 简单的占位图片 -->
+                        <rect width="80" height="80" fill="#f0f0f0" stroke="#ddd" stroke-width="1" rx="4" />
+                        <circle cx="40" cy="30" r="12" fill="#ccc" />
+                        <rect x="20" y="50" width="40" height="20" fill="#ccc" rx="2" />
+                        <text x="40" y="58" text-anchor="middle" font-size="8" fill="#999">照片</text>
+                    </svg>
+                </div>
+                <div class="middle1-qr-text">官方微信</div>
+            </div>
+        </div>
+        <div class="middle1-footer-bottom">
+            <p>&copy; 2025 成都理工大学材料与化学化工学院 版权所有 | 蜀ICP备05026980号</p>
+        </div>
+    </footer>
+
+    <!-- middle1.html的CSS样式 -->
+    <style>
+        /* ====== middle1.html 专用样式 ====== */
+        .middle1-main-section {
+            max-width: 1200px;
+            margin: 30px auto;
+            display: flex;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .middle1-main-left,
+        .middle1-main-center {
+            flex: 1;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .middle1-main-right {
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .middle1-section-title {
+            background: linear-gradient(90deg, #1e5494 0%, #2d6bb0 100%);
+            color: white;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .middle1-more-link {
+            color: #ffd700;
+            text-decoration: none;
+            float: right;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .middle1-more-link:hover {
+            color: #fff;
+        }
+
+        .middle1-notice-list,
+        .middle1-news-list {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .middle1-notice-list tr,
+        .middle1-news-list tr {
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            height: 48px;
+            /* 统一行高 */
+        }
+
+        .middle1-notice-list tr:hover,
+        .middle1-news-list tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .middle1-notice-date {
+            width: 60px;
+            padding: 8px 10px;
+            color: #666;
+            font-size: 12px;
+            text-align: center;
+            border-right: 1px solid #eee;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .middle1-notice-title {
+            padding: 12px 15px;
+            color: #333;
+            font-size: 14px;
+            line-height: 1.4;
+            vertical-align: middle;
+        }
+
+        .middle1-notice-title.normal {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .middle1-featured-news-container {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            cursor: pointer;
+        }
+
+        .middle1-featured-news-image {
+            width: 180px;
+            height: 120px;
+            position: relative;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .middle1-carousel-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .middle1-carousel-slide {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .middle1-carousel-slide.active {
+            opacity: 1;
+        }
+
+        .middle1-carousel-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #middle1-carousel-caption {
+            font-size: 12px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .middle1-carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .middle1-carousel-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .middle1-carousel-dot.active {
+            background: white;
+        }
+
+        .middle1-featured-news-text {
+            flex: 1;
+        }
+
+        .middle1-featured-news-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .middle1-featured-news-summary {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .middle1-featured-news-date {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .middle1-news-title {
+            padding: 12px 15px;
+            color: #333;
+            font-size: 14px;
+            line-height: 1.4;
+            position: relative;
+            vertical-align: middle;
+        }
+
+        .middle1-news-icon {
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background: #1e5494;
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .middle1-news-date {
+            width: 50px;
+            padding: 8px 10px;
+            color: #666;
+            font-size: 12px;
+            text-align: center;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .middle1-side-img {
+            width: 100%;
+            height: 95px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .middle1-side-img:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .middle1-bottom-section {
+            max-width: 1400px;
+            margin: 40px auto;
+            display: flex;
+            gap: 30px;
+            padding: 0 30px;
+            align-items: stretch;
+            /* 确保所有栏目高度一致 */
+        }
+
+        .middle1-bottom-column {
+            flex: 1;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 1px solid #e8e8e8;
+            display: flex;
+            flex-direction: column;
+            min-height: 600px;
+            /* 设置最小高度确保对齐 */
+        }
+
+        .middle1-bottom-title {
+            background: linear-gradient(90deg, #1e5494 0%, #2d6bb0 100%);
+            color: white;
+            padding: 20px 25px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            flex-shrink: 0;
+            /* 防止标题被压缩 */
+        }
+
+        .middle1-bottom-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+        }
+
+        .middle1-bottom-list {
+            width: 100%;
+            border-collapse: collapse;
+            flex: 1;
+            /* 让表格占据剩余空间 */
+        }
+
+        .middle1-bottom-list tr {
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: 52px;
+            /* 增加行高 */
+        }
+
+        .middle1-bottom-list tr:hover {
+            background-color: #f8f9fa;
+            transform: translateX(2px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .middle1-bottom-list tr:last-child {
+            border-bottom: none;
+        }
+
+        .middle1-bottom-item-title {
+            padding: 15px 20px;
+            color: #333;
+            font-size: 15px;
+            line-height: 1.5;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            vertical-align: middle;
+            font-weight: 500;
+        }
+
+        .middle1-bottom-item-date {
+            width: 80px;
+            min-width: 80px;
+            padding: 15px 12px;
+            color: #666;
+            font-size: 13px;
+            text-align: center;
+            vertical-align: middle;
+            white-space: nowrap;
+            font-weight: 600;
+            background: #f8f9fa;
+            border-left: 1px solid #f0f0f0;
+            flex-shrink: 0;
+        }
+
+        .middle1-footer {
+            background: #1e5494;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .middle1-footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .middle1-footer-nav {
+            display: flex;
+            gap: 40px;
+        }
+
+        .middle1-footer-nav-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .middle1-footer-link {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .middle1-footer-link:hover {
+            color: white;
+        }
+
+        .middle1-footer-contact {
+            flex: 1;
+            margin: 0 40px;
+        }
+
+        .middle1-contact-item {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .middle1-footer-qr {
+            text-align: center;
+        }
+
+        .middle1-qr-code {
+            margin-bottom: 10px;
+        }
+
+        .middle1-qr-text {
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .middle1-footer-bottom {
+            background: #0f3a5f;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .middle1-footer-bottom p {
+            margin: 0;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+
+    <!-- middle1.html的JavaScript -->
     <script>
-        /**
-         * 成都理工大学材料与化学化工学院官网 JavaScript 文件
-         * 实现轮播图、导航交互等功能
-         */
-
-        // 等待DOM加载完成
+        // ====== middle1.html 专用JavaScript ====== 
         document.addEventListener('DOMContentLoaded', function () {
-            // 初始化所有功能
-            initBannerSlider();
-            initNavigation();
-            initSearch();
-            initScrollEffects();
-        });
+            // 轮播图功能
+            const middle1CarouselSlides = document.querySelectorAll('.middle1-carousel-slide');
+            const middle1CarouselDots = document.querySelectorAll('.middle1-carousel-dot');
+            const middle1CarouselCaption = document.getElementById('middle1-carousel-caption');
+            let middle1CurrentSlide = 0;
 
-        /**
-         * 初始化轮播图功能
-         */
-        function initBannerSlider() {
-            const slides = document.querySelectorAll('.banner_slide');
-            const dots = document.querySelectorAll('.dot');
-            let currentSlide = 0;
-            const slideInterval = 5000; // 5秒切换一次
+            const middle1Captions = [
+                '改革开放再出发 立足岗位做贡献',
+                '学院举办第十二届"材料前沿"学术论坛',
+                '锂电池材料研究中心取得重大突破'
+            ];
 
-            // 如果没有轮播图元素，直接返回
-            if (slides.length === 0) return;
-
-            /**
-             * 显示指定索引的幻灯片
-             * @param {number} index - 幻灯片索引
-             */
-            function showSlide(index) {
+            function middle1ShowSlide(index) {
                 // 隐藏所有幻灯片
-                slides.forEach(slide => {
-                    slide.classList.remove('active');
-                });
-
-                // 移除所有点的激活状态
-                dots.forEach(dot => {
-                    dot.classList.remove('active');
-                });
+                middle1CarouselSlides.forEach(slide => slide.classList.remove('active'));
+                middle1CarouselDots.forEach(dot => dot.classList.remove('active'));
 
                 // 显示当前幻灯片
-                if (slides[index]) {
-                    slides[index].classList.add('active');
-                }
-
-                // 激活对应的点
-                if (dots[index]) {
-                    dots[index].classList.add('active');
-                }
-
-                currentSlide = index;
+                middle1CarouselSlides[index].classList.add('active');
+                middle1CarouselDots[index].classList.add('active');
+                middle1CarouselCaption.textContent = middle1Captions[index];
             }
 
-            /**
-             * 切换到下一张幻灯片
-             */
-            function nextSlide() {
-                const nextIndex = (currentSlide + 1) % slides.length;
-                showSlide(nextIndex);
+            function middle1NextSlide() {
+                middle1CurrentSlide = (middle1CurrentSlide + 1) % middle1CarouselSlides.length;
+                middle1ShowSlide(middle1CurrentSlide);
             }
 
-            // 为每个点添加点击事件
-            dots.forEach((dot, index) => {
+            // 点击圆点切换
+            middle1CarouselDots.forEach((dot, index) => {
                 dot.addEventListener('click', () => {
-                    showSlide(index);
+                    middle1CurrentSlide = index;
+                    middle1ShowSlide(middle1CurrentSlide);
                 });
             });
 
             // 自动轮播
-            setInterval(nextSlide, slideInterval);
+            setInterval(middle1NextSlide, 4000);
 
-            // 鼠标悬停时暂停轮播
-            const bannerSection = document.querySelector('.banner_section');
-            if (bannerSection) {
-                let autoSlideTimer = setInterval(nextSlide, slideInterval);
-
-                bannerSection.addEventListener('mouseenter', () => {
-                    clearInterval(autoSlideTimer);
-                });
-
-                bannerSection.addEventListener('mouseleave', () => {
-                    autoSlideTimer = setInterval(nextSlide, slideInterval);
-                });
-            }
-        }
-
-        /**
-         * 初始化导航功能
-         */
-        function initNavigation() {
-            const navLinks = document.querySelectorAll('.nav_link');
-            const dropdownItems = document.querySelectorAll('.nav_dropdown');
-
-            // 为导航链接添加点击效果
-            navLinks.forEach(link => {
-                link.addEventListener('click', function (e) {
-                    // 如果是有下拉菜单的项目，阻止默认行为
-                    if (this.parentElement.classList.contains('nav_dropdown')) {
-                        e.preventDefault();
-                        return;
-                    }
-
-                    e.preventDefault();
-
-                    // 移除所有激活状态
-                    navLinks.forEach(l => l.classList.remove('active'));
-
-                    // 添加当前激活状态
-                    this.classList.add('active');
-
-                    // 这里可以添加页面跳转逻辑
-                    console.log('导航到:', this.textContent);
+            // 图片点击事件
+            document.querySelectorAll('.middle1-side-img').forEach(img => {
+                img.addEventListener('click', function () {
+                    console.log('图片被点击:', this.alt);
                 });
             });
-
-            // 初始化下拉菜单功能
-            initDropdownMenus();
-
-            // 移动端导航切换
-            const header = document.querySelector('.header');
-            if (window.innerWidth <= 768) {
-                // 可以在这里添加移动端导航菜单的展开/收起功能
-                initMobileNavigation();
-            }
-        }
-
-        /**
-         * 初始化下拉菜单功能
-         */
-        function initDropdownMenus() {
-            const dropdownItems = document.querySelectorAll('.nav_dropdown');
-            const dropdownLinks = document.querySelectorAll('.dropdown_link');
-
-            // 为下拉菜单项添加点击事件
-            dropdownLinks.forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const linkText = this.textContent;
-                    console.log('点击下拉菜单项:', linkText);
-
-                    // 根据菜单项执行不同操作
-                    handleDropdownClick(linkText);
-                });
-            });
-
-            // 键盘导航支持
-            dropdownItems.forEach(item => {
-                const mainLink = item.querySelector('.nav_link');
-                const dropdownMenu = item.querySelector('.dropdown_menu');
-
-                // 键盘事件处理
-                mainLink.addEventListener('keydown', function (e) {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        toggleDropdown(item);
-                    } else if (e.key === 'ArrowDown') {
-                        e.preventDefault();
-                        const firstDropdownLink = dropdownMenu.querySelector('.dropdown_link');
-                        if (firstDropdownLink) {
-                            firstDropdownLink.focus();
-                        }
-                    }
-                });
-            });
-
-            // 点击外部关闭下拉菜单
-            document.addEventListener('click', function (e) {
-                if (!e.target.closest('.nav_dropdown')) {
-                    closeAllDropdowns();
-                }
-            });
-        }
-
-        /**
-         * 处理下拉菜单点击事件
-         * @param {string} linkText - 点击的菜单项文本
-         */
-        function handleDropdownClick(linkText) {
-            const actions = {
-                '学院简介': () => alert('学院简介页面暂未开放'),
-                '学院领导': () => alert('学院领导页面暂未开放'),
-                '机构设置': () => alert('机构设置页面暂未开放'),
-                '院务公开': () => alert('院务公开页面暂未开放'),
-                '本科专业': () => alert('本科专业页面暂未开放'),
-                '博士点': () => alert('博士点页面暂未开放'),
-                '硕士点': () => alert('硕士点页面暂未开放'),
-                '师资概况': () => alert('师资概况页面暂未开放'),
-                '教师名录': () => alert('教师名录页面暂未开放'),
-                '人才招聘': () => alert('人才招聘页面暂未开放'),
-                '党建动态': () => alert('党建动态页面暂未开放'),
-                '主题教育专栏': () => alert('主题教育专栏页面暂未开放'),
-                '学习资料': () => alert('学习资料页面暂未开放')
-            };
-
-            const action = actions[linkText];
-            if (action) {
-                action();
-            } else {
-                alert(`${linkText}页面暂未开放`);
-            }
-        }
-
-        /**
-         * 切换下拉菜单显示状态
-         * @param {Element} dropdownItem - 下拉菜单项元素
-         */
-        function toggleDropdown(dropdownItem) {
-            const isActive = dropdownItem.classList.contains('dropdown_active');
-
-            // 关闭所有下拉菜单
-            closeAllDropdowns();
-
-            // 如果当前菜单未激活，则激活它
-            if (!isActive) {
-                dropdownItem.classList.add('dropdown_active');
-            }
-        }
-
-        /**
-         * 关闭所有下拉菜单
-         */
-        function closeAllDropdowns() {
-            const activeDropdowns = document.querySelectorAll('.dropdown_active');
-            activeDropdowns.forEach(item => {
-                item.classList.remove('dropdown_active');
-            });
-        }
-
-        /**
-         * 初始化移动端导航
-         */
-        function initMobileNavigation() {
-            const dropdownItems = document.querySelectorAll('.nav_dropdown');
-
-            // 移动端下拉菜单点击切换
-            dropdownItems.forEach(item => {
-                const mainLink = item.querySelector('.nav_link');
-
-                mainLink.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    toggleDropdown(item);
-                });
-            });
-        }
-
-        /**
-         * 初始化搜索功能
-         */
-        function initSearch() {
-            const searchInput = document.querySelector('.search_input');
-            const searchBtn = document.querySelector('.search_btn');
-
-            if (!searchInput || !searchBtn) return;
-
-            /**
-             * 执行搜索
-             */
-            function performSearch() {
-                const searchTerm = searchInput.value.trim();
-
-                if (searchTerm === '') {
-                    alert('请输入搜索关键词');
-                    return;
-                }
-
-                // 这里可以添加实际的搜索逻辑
-                console.log('搜索关键词:', searchTerm);
-                alert(`搜索功能暂未开放，搜索关键词: ${searchTerm}`);
-
-                // 清空搜索框
-                searchInput.value = '';
-            }
-
-            // 搜索按钮点击事件
-            searchBtn.addEventListener('click', performSearch);
-
-            // 搜索框回车事件
-            searchInput.addEventListener('keypress', function (e) {
-                if (e.key === 'Enter') {
-                    performSearch();
-                }
-            });
-
-            // 搜索框获得焦点时的效果
-            searchInput.addEventListener('focus', function () {
-                this.style.boxShadow = '0 0 5px rgba(41, 137, 216, 0.5)';
-            });
-
-            // 搜索框失去焦点时的效果
-            searchInput.addEventListener('blur', function () {
-                this.style.boxShadow = 'none';
-            });
-        }
-
-        /**
-         * 初始化滚动效果
-         */
-        function initScrollEffects() {
-            // 返回顶部按钮
-            createBackToTopButton();
-
-            // 滚动时的导航栏效果
-            window.addEventListener('scroll', function () {
-                const header = document.querySelector('.header');
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                if (scrollTop > 100) {
-                    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
-                } else {
-                    header.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
-                }
-            });
-        }
-
-        /**
-         * 创建返回顶部按钮
-         */
-        function createBackToTopButton() {
-            // 创建返回顶部按钮
-            const backToTopBtn = document.createElement('button');
-            backToTopBtn.innerHTML = '↑';
-            backToTopBtn.className = 'back_to_top';
-            backToTopBtn.style.cssText = `
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
-        background: #2989d8;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        font-size: 20px;
-        cursor: pointer;
-        display: none;
-        z-index: 1000;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    `;
-
-            // 添加到页面
-            document.body.appendChild(backToTopBtn);
-
-            // 滚动事件监听
-            window.addEventListener('scroll', function () {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                if (scrollTop > 300) {
-                    backToTopBtn.style.display = 'block';
-                } else {
-                    backToTopBtn.style.display = 'none';
-                }
-            });
-
-            // 点击返回顶部
-            backToTopBtn.addEventListener('click', function () {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-
-            // 悬停效果
-            backToTopBtn.addEventListener('mouseenter', function () {
-                this.style.background = '#1e5799';
-                this.style.transform = 'scale(1.1)';
-            });
-
-            backToTopBtn.addEventListener('mouseleave', function () {
-                this.style.background = '#2989d8';
-                this.style.transform = 'scale(1)';
-            });
-        }
-
-        /**
-         * 初始化新闻和公告的交互效果
-         */
-        function initNewsInteraction() {
-            const newsItems = document.querySelectorAll('.news_item, .notice_item');
-
-            newsItems.forEach(item => {
-                item.addEventListener('click', function () {
-                    const link = this.querySelector('.news_link, .notice_link');
-                    if (link) {
-                        // 这里可以添加新闻详情页面的跳转逻辑
-                        console.log('点击新闻:', link.textContent);
-                        alert('新闻详情页面暂未开放');
-                    }
-                });
-            });
-        }
-
-        /**
-         * 初始化常用链接的交互
-         */
-        function initLinksInteraction() {
-            const linkItems = document.querySelectorAll('.link_item');
-
-            linkItems.forEach(item => {
-                item.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const linkText = this.textContent;
-
-                    // 根据链接文本执行不同操作
-                    switch (linkText) {
-                        case '教务系统':
-                            alert('教务系统链接暂未配置');
-                            break;
-                        case '学工系统':
-                            alert('学工系统链接暂未配置');
-                            break;
-                        case '图书馆':
-                            alert('图书馆链接暂未配置');
-                            break;
-                        case '邮件系统':
-                            alert('邮件系统链接暂未配置');
-                            break;
-                        default:
-                            alert(`${linkText}链接暂未配置`);
-                    }
-                });
-            });
-        }
-
-        /**
-         * 窗口大小改变时的响应式处理
-         */
-        window.addEventListener('resize', function () {
-            // 重新计算布局
-            const windowWidth = window.innerWidth;
-
-            if (windowWidth <= 768) {
-                // 移动端处理
-                console.log('切换到移动端布局');
-            } else {
-                // 桌面端处理
-                console.log('切换到桌面端布局');
-            }
         });
-
-        /**
-         * 页面加载完成后的初始化
-         */
-        window.addEventListener('load', function () {
-            // 初始化新闻交互
-            initNewsInteraction();
-
-            // 初始化链接交互
-            initLinksInteraction();
-
-            // 添加加载完成的动画效果
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.5s ease';
-
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-            }, 100);
-
-            console.log('成都理工大学材料与化学化工学院官网加载完成');
-        });
-
-        /**
-         * 错误处理
-         */
-        window.addEventListener('error', function (e) {
-            console.error('页面发生错误:', e.error);
-            // 可以在这里添加错误上报逻辑
-        });
-
-        // 导出主要函数供外部调用
-        if (typeof module !== 'undefined' && module.exports) {
-            module.exports = {
-                initBannerSlider,
-                initNavigation,
-                initSearch,
-                initScrollEffects
-            };
-        }
     </script>
+
+    <!-- 原index.html的JavaScript继续 -->
+    <script>
+        // 轮播图数据
+        const bannerData = [
+            {
+                image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1200&h=400&fit=crop&crop=center",
+                title: "学院活动"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=400&fit=crop&crop=center",
+                title: "学术会议"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=1200&h=400&fit=crop&crop=center",
+                title: "实验室"
+            }
+        ];
+
+        // 新闻数据
+        const newsData = [
+            { title: "学院召开2025年春季学期期末教职工大会", date: "2025.07.11" },
+            { title: "学院召开中国国际大学生创新大赛（2025）省赛决赛出征活动暨动员大会", date: "2025.07.10" },
+            { title: "学院召开2026年研究生招生宣讲会", date: "2025.07.03" }
+        ];
+
+        // 通用链接数据
+        const commonLinks = [
+            { name: "教务系统", url: "#" },
+            { name: "图书馆", url: "#" },
+            { name: "学工系统", url: "#" },
+            { name: "邮件系统", url: "#" }
+        ];
+
+        let currentSlide = 0;
+
+        // 轮播图功能
+        function initBanner() {
+            const bannerContainer = document.querySelector('.banner_container');
+            const dotsContainer = document.querySelector('.banner_dots');
+
+            if (!bannerContainer || !dotsContainer) return;
+
+            // 清空现有内容
+            bannerContainer.innerHTML = '';
+            dotsContainer.innerHTML = '';
+
+            // 创建轮播图片
+            bannerData.forEach((item, index) => {
+                const slide = document.createElement('div');
+                slide.className = `banner_slide ${index === 0 ? 'active' : ''}`;
+                slide.innerHTML = `<img src="${item.image}" alt="${item.title}" class="banner_img">`;
+                bannerContainer.appendChild(slide);
+
+                const dot = document.createElement('span');
+                dot.className = `dot ${index === 0 ? 'active' : ''}`;
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+
+            // 自动轮播
+            setInterval(nextSlide, 5000);
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % bannerData.length;
+            updateSlide();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlide();
+        }
+
+        function updateSlide() {
+            const slides = document.querySelectorAll('.banner_slide');
+            const dots = document.querySelectorAll('.dot');
+
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        // 导航下拉菜单
+        function initNavigation() {
+            const navItems = document.querySelectorAll('.nav_item');
+
+            navItems.forEach(item => {
+                const dropdown = item.querySelector('.dropdown');
+                if (dropdown) {
+                    let hoverTimer;
+
+                    item.addEventListener('mouseenter', () => {
+                        clearTimeout(hoverTimer);
+                        item.classList.add('on');
+                    });
+
+                    item.addEventListener('mouseleave', () => {
+                        hoverTimer = setTimeout(() => {
+                            item.classList.remove('on');
+                        }, 100);
+                    });
+                }
+            });
+        }
+
+        // 搜索功能
+        function initSearch() {
+            const searchInput = document.getElementById('search-input');
+            const searchBtn = document.getElementById('search-btn');
+
+            if (searchInput && searchBtn) {
+                searchBtn.addEventListener('click', performSearch);
+                searchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        performSearch();
+                    }
+                });
+            }
+        }
+
+        function performSearch() {
+            const searchInput = document.getElementById('search-input');
+            const query = searchInput.value.trim();
+            if (query) {
+                console.log('搜索:', query);
+                // 这里可以添加实际的搜索逻辑
+            }
+        }
+
+        // 搜索框焦点效果
+        function initSearchEffects() {
+            const searchInput = document.getElementById('search-input');
+            if (searchInput) {
+                searchInput.addEventListener('focus', function () {
+                    this.style.borderColor = '#0c5685';
+                    this.style.boxShadow = '0 0 5px rgba(12, 86, 133, 0.3)';
+                });
+
+                searchInput.addEventListener('blur', function () {
+                    this.style.borderColor = '#ddd';
+                    this.style.boxShadow = 'none';
+                });
+            }
+        }
+
+        // 滚动效果
+        function initScrollEffects() {
+            const header = document.querySelector('.header');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                // 头部阴影效果
+                if (scrollTop > 50) {
+                    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                } else {
+                    header.style.boxShadow = 'none';
+                }
+
+                // 返回顶部按钮
+                let backToTop = document.getElementById('back-to-top');
+                if (!backToTop && scrollTop > 300) {
+                    backToTop = document.createElement('div');
+                    backToTop.id = 'back-to-top';
+                    backToTop.innerHTML = '↑';
+                    backToTop.style.cssText = `
+                        position: fixed;
+                        bottom: 30px;
+                        right: 30px;
+                        width: 50px;
+                        height: 50px;
+                        background: #1e5494;
+                        color: white;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        font-size: 20px;
+                        z-index: 1000;
+                        transition: all 0.3s;
+                        opacity: 0.8;
+                    `;
+                    backToTop.addEventListener('click', () => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    });
+                    backToTop.addEventListener('mouseenter', () => {
+                        backToTop.style.opacity = '1';
+                        backToTop.style.transform = 'scale(1.1)';
+                    });
+                    backToTop.addEventListener('mouseleave', () => {
+                        backToTop.style.opacity = '0.8';
+                        backToTop.style.transform = 'scale(1)';
+                    });
+                    document.body.appendChild(backToTop);
+                } else if (backToTop && scrollTop <= 300) {
+                    backToTop.remove();
+                }
+
+                lastScrollTop = scrollTop;
+            });
+        }
+
+        // 新闻项点击处理
+        function handleNewsClick(newsItem) {
+            console.log('新闻被点击:', newsItem);
+            // 这里可以添加跳转到新闻详情页的逻辑
+        }
+
+        // 通用链接处理
+        function handleCommonLinks() {
+            commonLinks.forEach(link => {
+                console.log(`${link.name}: ${link.url}`);
+            });
+        }
+
+        // 响应式处理
+        function handleResize() {
+            const width = window.innerWidth;
+            const navList = document.querySelector('.nav_list');
+
+            if (navList) {
+                if (width < 768) {
+                    navList.style.flexDirection = 'column';
+                    navList.style.padding = '0 10px';
+                } else {
+                    navList.style.flexDirection = 'row';
+                    navList.style.padding = '0 20px';
+                }
+            }
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function () {
+            try {
+                initBanner();
+                initNavigation();
+                initSearch();
+                initSearchEffects();
+                initScrollEffects();
+                handleCommonLinks();
+                handleResize();
+
+                // 添加淡入动画
+                document.body.style.opacity = '0';
+                setTimeout(() => {
+                    document.body.style.transition = 'opacity 0.5s';
+                    document.body.style.opacity = '1';
+                }, 100);
+
+                console.log('页面初始化完成');
+            } catch (error) {
+                console.error('初始化过程中发生错误:', error);
+            }
+        });
+
+        // 窗口大小改变时重新处理响应式
+        window.addEventListener('resize', handleResize);
+
+        // 导出主要函数供外部使用
+        window.siteUtils = {
+            performSearch,
+            handleNewsClick,
+            goToSlide,
+            nextSlide
+        };
+    </script>
+
 </body>
 
 </html>
